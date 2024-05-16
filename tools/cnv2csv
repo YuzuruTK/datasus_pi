@@ -25,17 +25,17 @@ import os
 def parse_cnv_line(line):
     return (
         str(line[:7]),
-        str(line[8:14]),
-        str(line[15:59]),
+        # str(line[8:14]),
+        str(line[9:59]), # str(line[15:59]),
         str(line[60:-1]) # Remove \n
     )
 
 def cnv_to_csv(cnv_path):
     csv_path = ''.join(os.path.splitext(cnv_path)[:-1]) + '.csv'
     with open(cnv_path, 'r', encoding='iso8859-1') as cnv_file:
-        # Read lines skipping header
-        cnv_lines = cnv_file.readlines()[1:]
-        csv_lines = []
+        #? Read lines skipping header and last blank line
+        cnv_lines = cnv_file.readlines()[0:-1]
+        csv_lines = ['"ID","Descricao","Codigo"']
 
         for line in cnv_lines:
             fields = parse_cnv_line(line)
@@ -64,4 +64,3 @@ if not ext in ('.cnv', '.CNV'):
     exit(1)
 
 cnv_to_csv(path)
-
