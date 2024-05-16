@@ -4,108 +4,75 @@ import duckdb
 import time
 from dbfread import DBF
 
-dbf_directory = "./output_dbf"
-output_directory = "./database"
+# Diretório dos arquivos em DBF
+dbf_directory = "./output_dbf/"
+# Diretório onde vai ficar a base de dados
+output_directory = "./database/"
+# Nome da tabela principal
 table_name = "psicossocial"
+# Nome do arquivo da Database
 database_name = "database_pi"
 
+# Caso o arquivo exista, deleta ele
 if os.path.exists(f"{output_directory}/{database_name}.db"):
     os.remove(f"{output_directory}/{database_name}.db")
+# caso o diretório nao exista, cria ele
 if not os.path.exists(output_directory):
     os.mkdir(output_directory) 
 
-database = duckdb.connect(f"{output_directory}/{database_name}.db")
+# Cria a base de dados
+database = duckdb.connect(f"{output_directory}/{database_name}.db") 
 
+# Lista o nome dos arquivos DBF na pasta
 dbf_db_files = [f for f in os.listdir(dbf_directory) if f.endswith('.dbf')]
-# aux_db_files = [f for f in os.listdir(dbf_directory+"/aux") if f.endswith('.csv')]
+# Lista o nome dos arquivos CSV na pasta auxiliar
+aux_db_files = [f for f in os.listdir(dbf_directory+"/aux") if f.endswith('.csv')]
 
+# Itera por todos os arquivos CSV
+for csv_name in aux_db_files:
+    # pega o nome do arquivo sem extensão
+    name = csv_name[:-4]
+    # cria a tabela para o cnv que é um csv agora, e coloca o Código como chave primária
+    database.sql(f"CREATE TABLE {name.lower()} (ID integer, descricao TEXT, Codigo Text, Primary Key (Codigo));")
+    # Importa os dados pra dentro da tabela
+    database.sql(f"INSERT INTO {name.lower()} SELECT * FROM read_csv('{dbf_directory}aux/{csv_name}');")
 
-## IGNORA ESSA PARADA DE MACACO FOI LITERAL PRA TESTE OK
-## O BANCO JA VAI TA GERADO, DPS TENHO Q VER COMO EU PASSO UM ARQUIVO SQL PRA RODAR
-database.execute(
-    f"""
-CREATE TABLE {table_name}(
-  cnes_exec  char(7),
-  gestao     char(6),
-  condic     char(2),
-  ufmun      char(6),
-  tpups      char(2),
-  tippre     char(2),
-  mn_ind     char(1),
-  cnpjcpf    char(14),
-  cnpjmnt    char(14),
-  dt_process char(6),
-  dt_atend   char(6),
-  cns_pac    char(15),
-  dtnasc     char(8),
-  tpidadepac char(1),
-  idadepac   char(2),
-  nacion_pac char(2),
-  sexopac    char(1),
-  racacor    char(2),
-  etnia      char(2),
-  munpac     char(6),
-  mot_cob    char(2),
-  dt_motcob  char(8),
-  catend     char(2),
-  cidpri     char(4),
-  cidassoc   char(4),
-  origem_pac char(2),
-  dt_inicio  char(8),
-  dt_fim     char(8),
-  cob_esf    char(1),
-  cnes_esf   char(7),
-  destinopac char(2),
-  pa_proc_id char(10),
-  pa_qtdpro  char(11),
-  pa_qtdapr  char(11),
-  pa_srv     char(3),
-  pa_class_s char(3),
-  sit_rua    char(3),
-  tp_droga   char(3),
-  loc_realiz char(1),
-  inicio     char(8),
-  fim        char(8),
-  permanen   char(4),
-  qtdate     char(4),
-  qtdpcn     char(4),
-  nat_jur    char(4)
-  );
-"""
-)
+# Abre o arquivo SQL da criação da tabela principal dos DBFs
+fd = open('database_creation.sql', 'r')
+# Cospe todo o arquivo na variavel
+sqlFile = fd.read()
+# fecha o arquivo ufa
+fd.close()
+
+# Cria a base no banco
+database.execute(sqlFile)
+
+# Contador pra ver quantos arquivos foram convertidos
 counter = 0
+# Tempo inicial para pegar o tempo total que ficou convertendo e importando
 total_time = time.time()
 for dbf_name in dbf_db_files:
+    counter += 1
+    # Abre o DBF e joga pra um arquivo
     table = DBF(f'{dbf_directory}/{dbf_name}', 'latin-1')
-    # DBF TO CSV
-    start_time = time.time()
     csv_path = f"{output_directory}/{table.name}.csv"
+    # Abre um CSV e joga todo as coisas do DBF para o CSV
     with open(csv_path, "w", newline="") as csv_file:
         writer = csv.writer(csv_file)
         writer.writerow(table.field_names)
         for record in table:
             writer.writerow(list(record.values()))
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-    start_time = time.time()
-    columns = ""
-    for i in range(len(table.field_names)):
-        if (i+1) != len(table.field_names):
-            columns += table.field_names[i] + ", "
-        else:
-            columns += table.field_names[i]
-    database.sql(f"INSERT INTO {table_name}({columns}) SELECT * FROM read_csv('{output_directory}/{table.name}.csv');")
+    # Retorna as colunas da tabela no banco de dados
+    columns = database.query(f"PRAGMA table_info({table_name});").fetchall()
+    # Cria uma String com os nomes das colunas para a inserção no banco de dados
+    columns = ", ".join([i[1] for i in columns])
+    # Insere os dados no banco de dados, utilizando somente as colunas listadas
+    database.sql(f"INSERT INTO {table_name}({columns}) SELECT {columns} FROM read_csv('{output_directory}/{table.name}.csv');")
+    # Deleta o arquivo CSV criado
     os.remove(csv_path)
-    end_time = time.time()
-    elapsed_time = end_time - start_time    
-    counter += 1
+    # Mostra o progresso
     print(f"\r{counter}/{len(dbf_db_files)} {round((counter/len(dbf_db_files))*100, 2)}%",end="",)
+# Adicionado todos os DBFs na tabela
+database.close()
+# Mostra o tempo total de importação
 print(f"\nTempo total para inserção de todas os dados no BD {round(time.time() - total_time, 2)} segundos")
-
-# for csv_name in aux_db_files:
-#     # with open(f'{dbf_directory}/aux/{csv_name}', 'r+',encoding="ISO 8859-1") as file:
-#         # line = ['sequencial', 'descricao', 'codigos']
-#         # print(f"abrindo {csv_name}")
-#         # csvreader = csv.writer(file)
-#         # csvreader.writerow(line)
-#     csv_to_database(csv_name)
