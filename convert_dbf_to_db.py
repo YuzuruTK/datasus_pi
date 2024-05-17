@@ -68,6 +68,7 @@ for csv_name in aux_db_files:
     # Importa os dados pra dentro da tabela
     database.sql(f"INSERT INTO {name.lower()} SELECT cd_cod, cd_descr FROM read_csv('{output_directory}{name}.csv');")
     print(f"\r{counter}/{len(aux_db_files)} {round((counter/len(aux_db_files))*100, 2)}%",end="",)
+    os.remove(csv_path)
 print(f"\nTempo total para inserção de todas os dados no BD {round(time.time() - total_time, 2)} segundos")
 
 # Abre o arquivo SQL da criação da tabela principal dos DBFs
