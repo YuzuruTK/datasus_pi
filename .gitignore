@@ -1,5 +1,5 @@
-/raw_data
-/output_dbf
-/tools/susgrep.sh
+/data_analysis/raw_data
+/data_analysis/output_dbf
+/data_analysis/tools/susgrep.sh
 /.venv
-/database
+/data_analysis/database

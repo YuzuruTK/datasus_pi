@@ -64,9 +64,9 @@ for csv_name in aux_db_files:
         for record in table:
             writer.writerow(list(record.values()))
     # cria a tabela para o cnv que é um csv agora, e coloca o Código como chave primária
-    database.sql(f"CREATE TABLE {name.lower()} (codigo Text, descr Text,  Primary Key (codigo));")
+    database.sql(f"CREATE TABLE {name.lower()} AS FROM read_csv('{output_directory}{name}.csv');")
     # Importa os dados pra dentro da tabela
-    database.sql(f"INSERT INTO {name.lower()} SELECT cd_cod, cd_descr FROM read_csv('{output_directory}{name}.csv');")
+    # database.sql(f"INSERT INTO {name.lower()} SELECT * FROM read_csv('{output_directory}{name}.csv');")
     print(f"\r{counter}/{len(aux_db_files)} {round((counter/len(aux_db_files))*100, 2)}%",end="",)
     os.remove(csv_path)
 print(f"\nTempo total para inserção de todas os dados no BD {round(time.time() - total_time, 2)} segundos")
@@ -111,5 +111,7 @@ for dbf_name in dbf_db_files:
 database.close()
 # Mostra o tempo total de importação
 total_time = time.time() - total_time
-total_time = f"{round(total_time, 2)} segundos" if total_time < 60 else f"{total_time/60} minutos"
+total_time = f"{round(total_time, 2)} segundos" if total_time < 60 else f"{round(total_time/60, 2)} minutos"
 print(f"\nTempo total para inserção de todas os dados no BD {total_time}")
+
+print("Criação dos Indexes na base para uma Consulta mais rápida (ISSO FARÁ COM QUE A BASE DE DADOS SEJA INUTILIZAVEL PARA A TRANSAÇÃO DE DADOS)")

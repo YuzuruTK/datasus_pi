@@ -26,8 +26,8 @@ def parse_cnv_line(line):
     return (
         str(line[:7]),
         # str(line[8:14]),
-        str(line[9:59]), # str(line[15:59]),
-        str(line[60:-1]) # Remove \n
+        str(line[9:60]), # str(line[15:59]),
+        str(line[61:-1]) # Remove \n
     )
 
 def cnv_to_csv(cnv_path):
