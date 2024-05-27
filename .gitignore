@@ -10,6 +10,10 @@
 /flutter_app/flutter_app/windows
 /flutter_app/flutter_app/ios
 /flutter_app/flutter_app/android
+/flutter_app/flutter_app/build
+/flutter_app/flutter_app/pubspec.lock
+/flutter_app/flutter_app/README.md
+
 /flutter_app/flutter_app/*.class
 /flutter_app/flutter_app/*.log
 /flutter_app/flutter_app/*.pyc
