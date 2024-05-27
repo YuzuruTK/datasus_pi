@@ -34,7 +34,7 @@ def cnv_to_csv(cnv_path):
     csv_path = ''.join(os.path.splitext(cnv_path)[:-1]) + '.csv'
     with open(cnv_path, 'r', encoding='iso8859-1') as cnv_file:
         #? Read lines skipping header and last blank line
-        cnv_lines = cnv_file.readlines()[0:-1]
+        cnv_lines = cnv_file.readlines()[:-1]
         csv_lines = ['"ID","Descricao","Codigo"']
 
         for line in cnv_lines:
