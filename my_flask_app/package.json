@@ -1,0 +1,17 @@
+{
+  "name": "my_flask_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  	"build-css": "sass static/sass/main.scss static/css/main.css"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bulma": "^1.0.1",
+    "sass": "^1.77.2"
+  }
+}
