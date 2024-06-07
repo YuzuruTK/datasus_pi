@@ -79,4 +79,5 @@
 
 .progress-bar-container > .progress {
   margin: 0;
+  cursor: pointer;
 }
