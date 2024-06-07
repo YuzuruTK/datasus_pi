@@ -58,22 +58,35 @@
     }*/
 
 .time-display {
-  margin-left: 10px;      
+  display: flex;
+  height: 100%;
+  padding: 0 10px;      
   font-size: 12px;
   color: #000;
-  z-index: 1;
   white-space: nowrap;
+  align-items: center;
 }
 
 .audio-player-wrapper {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;  
+  height: 24px;
+}
+
+#play-pause {
+  filter: saturate(0);
+  padding:  0 10px;
+}
+
+#play-pause:hover {
+  text-decoration: none;
 }
 
 .audio-player-wrapper > .progress-bar-container {
   display: flex;
-  width: 80%;
+  flex-grow: 1;
+  height: 100%;
   align-items: center;
 }
 

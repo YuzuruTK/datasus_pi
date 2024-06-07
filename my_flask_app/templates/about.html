@@ -43,16 +43,17 @@
                         </div>
                         </div>
                     </div>
+
                     <div class="container is-widescreen">
                         <div class="audio-player box ">
                             <div class="audio-title">Your Audio Title</div>
                             <div class="audio-player-wrapper">
-                              <button id="play-pause" class="button is-ghost">▶️</button>
+                              <button id="play-pause" class="is-ghost">▶</button>
                               <div class="progress-bar-container" id="progress-bar-container">
-                                <progress class="progress is-primary" id="progress-bar" max="100"></progress>
+                                <progress class="progress is-small" id="progress-bar" value="0" max="100"></progress>
                                 <div class="time-display" id="time-display">
                                   <span id="cur-time-audio-player">00:00</span> /
-                                  <span class="max-time-audio-player">00:00</span>
+                                  <span id="max-time-audio-player">00:00</span>
                                 </div>
                               </div>
                             </div>
@@ -60,9 +61,9 @@
                               <source src="{{ url_for('static', filename='audio/ugao.mp3')}}" type="audio/mp3">
                               Your browser does not support the audio element.
                             </audio>
-                          </div>
+                        </div>
                           
-                      </div>
+                    </div>
                     
                   
                 </div>
@@ -95,48 +96,6 @@
     </div>    
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const audio = document.getElementById('audio');
-        const playPauseBtn = document.getElementById('play-pause');
-        const progressBar = document.getElementById('progress-bar');
-        const progressBarContainer = document.getElementById('progress-bar-container');
-        const curTimeDisplay = document.getElementById('cur-time-audio-player');
-        const maxTimeDisplay = document.getElementById('max-time-audio-player');
-
-        playPauseBtn.addEventListener('click', () => {
-            if (audio.paused) {
-                audio.play();
-                playPauseBtn.textContent = '⏸️';
-            } else {
-                audio.pause();
-                playPauseBtn.textContent = '▶️';
-            }
-        });
-
-        audio.addEventListener('timeupdate', () => {
-            const progress = (audio.currentTime / audio.duration) * 100;
-            progressBar.value = progress;
-            curTimeDisplay.textContent = formatTime(audio.currentTime);
-        });
-
-        audio.addEventListener('loadedmetadata', () => {
-            maxTimeDisplay.textContent = formatTime(audio.duration);
-        });
-
-        progressBar.addEventListener('click', (e) => {
-            const rect = progressBar.getBoundingClientRect();
-            const offsetX = e.clientX - rect.left;
-            const newTime = (offsetX / rect.width) * audio.duration;
-            audio.currentTime = newTime;
-        });
-
-        function formatTime(seconds) {
-            const minutes = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-        }
-    });
-</script>
+<script src="{{ url_for('static', filename='js/about_script.js') }}"></script>
   
 {% endblock %}
