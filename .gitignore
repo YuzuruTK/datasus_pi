@@ -51,3 +51,12 @@
 
 # Obfuscation related
 /flutter_app/flutter_app/app.*.map.json
+
+# PYTHON ________________________________
+*/venv/
+*/.venv/
+*/__pycache__/
+
+# Node.js ________________________________
+*/node_modules/
+
