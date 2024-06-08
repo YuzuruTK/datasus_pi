@@ -1,6 +1,17 @@
 /* Importar Bulma */
 @import url('bulma/css/bulma-no-dark-mode.min.css');
 
+/* Remover margem inferior de todos os elementos <p> */
+p {
+    margin-bottom: 0 !important;
+}
+
+/* Remover margem superior e inferior de todos os elementos <h1> a <h6> */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
 /* Estilos personalizados */
 .custom-gradient-background {
   background: linear-gradient(
@@ -93,4 +104,7 @@
 .progress-bar-container > .progress {
   margin: 0;
   cursor: pointer;
+}
+p.remove-margin-bottom {
+    margin-bottom: 0;
 }
