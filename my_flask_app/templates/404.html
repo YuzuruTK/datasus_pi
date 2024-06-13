@@ -5,17 +5,22 @@
 {% block content %}
 
 <div class="container is-mobile">
-<article class="message is-danger is-medium">
+<article class="message is-warning is-medium">
   <div class="message-header ">
   	<p>404 - PAGINA NÃO ENCONTRADA<p>
     <button class="delete" aria-label="delete"></button>
   </div>
-  <div class="message-body">
+  <div class="message-body custom-beige-background">
     A página que você tentou acessar não existe, por favor siga para a página inicial e começe
     novamente sua jornada.
     <nav class="level " style="margin-top: 20px">
       <div class="level-item has-text-centered">
-    	<a class="button is-link is-large" href="{{ url_for('index') }}">Inicío</a>
+    	<a class="button is-info is-large" href="{{ url_for('index') }}">Inicío</a>
+    	<a class="button is-info is-dark is-large" href="{{ url_for('index') }}">dark</a>
+    	<a class="button is-info is-light is-large" href="{{ url_for('index') }}">light</a>
+      
+
+      
 	  </div>
     </nav>
   </div>

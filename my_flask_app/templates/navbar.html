@@ -1,23 +1,24 @@
-<div class="container"> 
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="{{ url_for('index') }}">
-        <img src="{{ url_for('static', filename='photos/Logo-NeuroData-modelo-3.gif')}}" alt="Placeholder image"/>
-      </a> 
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    <div id="navbarBasicExample" class="navbar-menu">
-      <a class="navbar-item" href="{{ url_for('index') }}">Inicío</a>
-      <a class="navbar-item" href="{{ url_for('about') }}">Sobre</a>
-      <a class="navbar-item" href="#">Documentation</a>
-    </div>
-  </nav>
-</div>
+
+  <div class="container is-white"> 
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="{{ url_for('index') }}">
+          <img src="{{ url_for('static', filename='photos/Logo-NeuroData-modelo-3.gif')}}" alt="Placeholder image"/>
+        </a> 
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <a class="navbar-item" href="{{ url_for('index') }}">Inicío</a>
+        <a class="navbar-item" href="{{ url_for('about') }}">Sobre</a>
+        <a class="navbar-item" href="#">Documentation</a>
+      </div>
+    </nav>
+  </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
