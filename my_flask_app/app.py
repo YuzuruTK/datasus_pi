@@ -31,6 +31,10 @@ def blog():
 
     return render_template('blog.html')
 
+@app.route('/feed')
+def feed():
+    return render_template('feed.html')
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
