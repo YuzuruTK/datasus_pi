@@ -1,4 +1,90 @@
 @charset "utf-8";
 
 /*! bulma.io v1.0.0 | MIT License | github.com/jgthms/bulma */
-@use "sass";
+
+
+
+$purple: #8771D9;
+$yellow: #EDCF6D;
+$light-blue: #A1C7CF;
+$dark-blue: #1B3059;
+$beige: #F5EEE6;
+
+/* Substituir as cores padrão do Bulma */
+@use "sass" with (
+$primary: $purple,
+$warning: $yellow,
+$success: $light-blue,
+$info: $dark-blue,
+);
+
+.custom-beige-background{
+    background-color: $beige;
+
+}
+
+
+
+
+/* Estilos personalizados */
+.custom-gradient-background {
+    background: linear-gradient(
+      to left,
+      #ff7e5f,  /* Cor 1 */
+      #feb47b,  /* Cor 2 */
+      #ff7e5f   /* Cor 3 */
+    );
+    min-height: 100vh;  /* Garante que o fundo cubra toda a altura da página */
+  }
+  .navbar {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  .navbar .navbar-menu {
+    flex-grow: initial;
+    flex-shrink: initial;
+  }
+
+
+  .time-display {
+    display: flex;
+    height: 100%;
+    padding: 0 10px;      
+    font-size: 12px;
+    color: #000;
+    white-space: nowrap;
+    align-items: center;
+  }
+  
+  .audio-player-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    height: 24px;
+  }
+  
+  #play-pause {
+    filter: saturate(0);
+    padding:  0 10px;
+  }
+  
+  #play-pause:hover {
+    text-decoration: none;
+  }
+  
+  .audio-player-wrapper > .progress-bar-container {
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .progress-bar-container > .progress {
+    margin: 0;
+    cursor: pointer;
+  }
+  p.remove-margin-bottom {
+      margin-bottom: 0;
+  }
+  
