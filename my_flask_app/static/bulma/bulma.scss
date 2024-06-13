@@ -88,3 +88,31 @@ $info: $dark-blue,
       margin-bottom: 0;
   }
   
+
+.modal-next,
+.modal-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+//   background: rgba(0, 0, 0, 0.5);
+//   color: white;
+//   border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.modal-next {
+  right: 10px;
+}
+
+.modal-prev {
+  left: 10px;
+}
+.modal-content .image img {
+    width: auto;
+    height: auto;
+    max-width: 100;
+    max-height: 100vh;
+    display: block;
+    margin: 0 auto;
+  }

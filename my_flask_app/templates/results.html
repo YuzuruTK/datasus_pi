@@ -1,7 +1,51 @@
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Resultados{% endblock %}
 
 {% block content %}
+
+<section class="section">
+    <div class="container">
+        {% for i in range(0, images|length, 3) %}
+            <div class="columns is-mobile">
+                {% for image in images[i:i+3] %}
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image has-ratio">
+                                <img src="{{ url_for('static', filename='graphs/' ~ image) }}" alt="{{ image }}" class="image-thumbnail" data-index="{{ loop.index0 }}">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+<!-- Modal para visualização de imagem -->
+
+<div id="image-modal" class="modal">
+    <div class="modal-background"></div>
+        <div class="modal-content">
+            
+            <p class="box custom-beige-background">
+                <img id="modal-image" class="image" src="" alt="">
+            </p>
+            
+            
+        </div>
+    <button class="modal-close button is-warning is-large" aria-label="close"></button>
+    <button class="modal-next button is-primary is-light" aria-label="next">Proximo</button>
+    <button class="modal-prev button is-primary is-light" aria-label="previous">Anterior</button>
+</div>
+
+            
+            
+<script src="{{ url_for('static', filename='js/image-full.js') }}"></script>
+          
+
 
 {%endblock%}

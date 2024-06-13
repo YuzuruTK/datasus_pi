@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-
+import os
 import subprocess
 
 # Executa o comando 'ls -l'
@@ -21,7 +21,15 @@ def about():
 
 @app.route('/resultados')
 def results():
-    return render_template('results.html')
+    image_folder = os.path.join(app.static_folder, 'graphs')
+    images = [f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, f))]
+    return render_template('results.html', images=images)
+
+
+@app.route('/blog')
+def blog():
+
+    return render_template('blog.html')
 
 @app.errorhandler(404)
 def page_not_found(e):
