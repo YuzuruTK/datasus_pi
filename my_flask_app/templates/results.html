@@ -30,16 +30,18 @@
 <div id="image-modal" class="modal">
     <div class="modal-background"></div>
         <div class="modal-content">
-            
-            <p class="box custom-beige-background">
-                <img id="modal-image" class="image" src="" alt="">
-            </p>
-            
+            <div class="box">
+                <figure class="image">
+                    <img id="modal-image" class="image-fullscreen" src="" alt="">
+                </figure>
+            </div>
             
         </div>
     <button class="modal-close button is-warning is-large" aria-label="close"></button>
-    <button class="modal-next button is-primary is-light" aria-label="next">Proximo</button>
-    <button class="modal-prev button is-primary is-light" aria-label="previous">Anterior</button>
+    <div class="columns mt-3">
+        <button class="column modal-next button is-primary is-light mr-6" aria-label="next">Proximo</button>
+        <button class="column modal-prev button is-primary is-light ml-6" aria-label="previous">Anterior</button>4
+    </div>  
 </div>
 
             
