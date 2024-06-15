@@ -22517,4 +22517,9 @@ p.remove-margin-bottom {
   object-fit: contain;
 }
 
+.rs-ijui {
+  max-height: 60vh;
+  padding-left: 1000px;
+}
+
 /*# sourceMappingURL=style.css.map */
