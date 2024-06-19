@@ -18,6 +18,8 @@ $success: $light-blue,
 $info: $dark-blue,
 );
 
+
+
 .custom-beige-background{
     background-color: $beige;
 
@@ -135,9 +137,31 @@ $info: $dark-blue,
 }
 
 
-.rs-ijui{
-  max-height: 60vh;
-  //max-width: 70vw;
-  padding-left: 1000px;
+.is-size-giga {
+  font-size: clamp(3rem, 20vw, 8rem); // Mínimo 2rem, escalável até 8vw, máximo 8rem
+}
+.is-size-g {
+  font-size: clamp(2rem, 15vw, 5rem); // Mínimo 1rem, escalável até 5vw, máximo 5rem
+}
+.is-size-mini {
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 
+.rozha-one-regular {
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $dark-blue;
+}
+.rozha-one-regular-light {
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $beige;
+}
+
+.img-min-width {
+  width: 40vw; // Define a largura mínima como 45% da viewport
+  max-width: 30%; // A largura máxima é o tamanho original da imagem
+  max-height: auto; // Mantém a proporção da imagem
+}

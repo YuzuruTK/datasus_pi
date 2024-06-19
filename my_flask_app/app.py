@@ -21,7 +21,7 @@ def about():
 
 @app.route('/resultados')
 def results():
-    image_folder = os.path.join(app.static_folder, 'graphs')
+    image_folder = os.path.join(app.static_folder, 'graphs') # type: ignore
     images = [f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, f))]
     return render_template('results.html', images=images)
 

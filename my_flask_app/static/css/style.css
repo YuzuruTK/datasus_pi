@@ -22517,9 +22517,36 @@ p.remove-margin-bottom {
   object-fit: contain;
 }
 
-.rs-ijui {
-  max-height: 60vh;
-  padding-left: 1000px;
+.is-size-giga {
+  font-size: clamp(3rem, 20vw, 8rem);
+}
+
+.is-size-g {
+  font-size: clamp(2rem, 15vw, 5rem);
+}
+
+.is-size-mini {
+  font-size: clamp(1rem, 5vw, 2rem);
+}
+
+.rozha-one-regular {
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #1B3059;
+}
+
+.rozha-one-regular-light {
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #F5EEE6;
+}
+
+.img-min-width {
+  width: 40vw;
+  max-width: 30%;
+  max-height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
