@@ -22445,7 +22445,7 @@ has-background-danger.is-hoverable:active {
 }
 
 .logo-image {
-  width: 25vw;
+  max-width: 25vw;
 }
 
 /* Estilos personalizados */
@@ -22522,7 +22522,7 @@ p.remove-margin-bottom {
 }
 
 .is-size-g {
-  font-size: clamp(2rem, 15vw, 5rem);
+  font-size: clamp(2rem, 13vw, 5rem);
 }
 
 .is-size-mini {

@@ -31,7 +31,7 @@ $info: $dark-blue,
 }
 
 .logo-image {
-  width: 25vw;
+  max-width: 25vw;
 }
 
 
@@ -141,7 +141,7 @@ $info: $dark-blue,
   font-size: clamp(3rem, 20vw, 8rem); // Mínimo 2rem, escalável até 8vw, máximo 8rem
 }
 .is-size-g {
-  font-size: clamp(2rem, 15vw, 5rem); // Mínimo 1rem, escalável até 5vw, máximo 5rem
+  font-size: clamp(2rem, 13vw, 5rem); // Mínimo 1rem, escalável até 5vw, máximo 5rem
 }
 .is-size-mini {
   font-size: clamp(1rem, 5vw, 2rem);
