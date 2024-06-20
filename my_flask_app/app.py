@@ -19,7 +19,7 @@ def index():
 def about():
     return render_template('about.html')
 
-@app.route('/resultados')
+@app.route('/galeria-de-graficos')
 def results():
     image_folder = os.path.join(app.static_folder, 'graphs') # type: ignore
     images = [f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, f))]
