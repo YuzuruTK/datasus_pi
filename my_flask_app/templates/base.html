@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" >
-<head>
+<html lang="en" data-theme="light" class="{{ body_class }}">
+    <head class="">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Meu App{% endblock %}</title>
@@ -14,11 +14,10 @@
 
 </head>
 
-<body class="has-background-white">
+<body class="">
    
-    <header>{% include 'navbar.html' %}</header>
     
-    <section class="content">
+    <section class="content ">
         {% block content %}{% endblock %}
     </section>
     

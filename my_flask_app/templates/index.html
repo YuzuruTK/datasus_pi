@@ -8,11 +8,13 @@
 
 
 
-<section class="hero custom-gradient-background is-fullheight-with-navbar">
+<section class="hero custom-gradient-background is-fullheight">
+  <header>{% include 'navbar.html' %}</header>
     <div class="hero-body">
+
       <div class="columns is-desktop">
-        <figure class="image column is-two-fifths">
-          <img src="{{ url_for('static', filename='photos/Logo-NeuroData-modelo-3.gif')}} " alt="Logo" class="logo-image ml-6"/>
+        <figure class="image column logo-image">
+          <img src="{{ url_for('static', filename='icons/output/1.png')}} " alt="Logo" class=""/>
         </figure>
 
         <div class="is-align-content-center is-mobile"><p class="is-size-1 column rozha-one-regular">Análise do Cenário Psicossocial da População Ijuiense</p></div>

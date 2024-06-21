@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import os
 import subprocess
 
@@ -9,15 +9,32 @@ subprocess.run(['sass', 'static/bulma/bulma.scss:static/css/style.css'])
 
 app = Flask(__name__)
 
+def get_body_class(route):
+    # Dicionário de rotas para classes
+    route_classes = {
+        '/': 'custom-beige-background',
+        '/sobre': 'custom-beige-background',
+        '/materia/nome-da-materia': 'custom-gradient-background'
+        # Adicione outras rotas e classes conforme necessário
+    }
+    return route_classes.get(route, 'default-class')
 
 @app.route('/')
 def index():
-    return render_template('index.html', css_file='style.css')
+    body_class = get_body_class(request.path)
+
+    return render_template('index.html', css_file='style.css', body_class=body_class)
+
+@app.route('/materia/nome-da-materia')
+def materiaTeste():
+        body_class = get_body_class(request.path)
+        return render_template('materias/materia-teste.html', body_class=body_class)
 
 
 @app.route('/sobre')
 def about():
-    return render_template('about.html')
+    body_class = get_body_class(request.path)
+    return render_template('about.html', body_class=body_class)
 
 @app.route('/galeria-de-graficos')
 def results():
@@ -28,8 +45,12 @@ def results():
 
 @app.route('/blog')
 def blog():
-
     return render_template('blog.html')
+
+@app.route('/resultados')
+def pesquisaResults():
+    return render_template('pesquisa-results.html')
+
 
 @app.route('/feed')
 def feed():

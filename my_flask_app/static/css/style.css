@@ -22435,29 +22435,33 @@ has-background-danger.is-hoverable:active {
   pointer-events: all !important;
 }
 
-.custom-beige-background {
-  background-color: #F5EEE6;
-}
-
 .button {
   border-radius: 50px;
   border: 2px solid black;
 }
 
 .logo-image {
-  max-width: 25vw;
+  width: 20vw;
+}
+@media (max-width: 768px) {
+  .logo-image {
+    width: 50vw;
+  }
 }
 
 /* Estilos personalizados */
+.custom-beige-background {
+  background-color: #F5EEE6;
+}
+
 .custom-gradient-background {
   background: linear-gradient(to right, #d1c8ed, #dbf9ff, #F5EEE6);
-  min-height: 100vh; /* Garante que o fundo cubra toda a altura da página */
 }
 
 .navbar {
   display: flex;
   align-content: center;
-  justify-content: center;
+  justify-content: right;
 }
 
 .navbar .navbar-menu {

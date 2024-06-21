@@ -20,10 +20,6 @@ $info: $dark-blue,
 
 
 
-.custom-beige-background{
-    background-color: $beige;
-
-}
 
 .button {
   border-radius: 50px; 
@@ -31,11 +27,21 @@ $info: $dark-blue,
 }
 
 .logo-image {
-  max-width: 25vw;
+  width: 20vw; // Valor padrão para desktop
+  // margin: 50px;
+
+  @media (max-width: 768px) { // Ponto de quebra para dispositivos móveis
+    width: 50vw;
+  }
 }
 
 
+
 /* Estilos personalizados */
+.custom-beige-background{
+    background-color: $beige;
+
+}
 .custom-gradient-background {
     background: linear-gradient(
       to right,
@@ -43,12 +49,11 @@ $info: $dark-blue,
       #dbf9ff,  /* Cor 2 */
       $beige   /* Cor 3 */
     );
-    min-height: 100vh;  /* Garante que o fundo cubra toda a altura da página */
   }
   .navbar {
     display: flex;
     align-content: center;
-    justify-content: center;
+    justify-content: right;
   }
   .navbar .navbar-menu {
     flex-grow: initial;
