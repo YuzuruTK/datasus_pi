@@ -22549,4 +22549,9 @@ p.remove-margin-bottom {
   max-height: auto;
 }
 
+.person-img {
+  margin-left: 25%;
+  width: 50%;
+}
+
 /*# sourceMappingURL=style.css.map */

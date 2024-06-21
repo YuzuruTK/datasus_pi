@@ -166,3 +166,7 @@ $info: $dark-blue,
   max-height: auto; // Mantém a proporção da imagem
 }
 
+.person-img{
+  margin-left: 25%;
+  width: clamp(25%, 50%, 100%);
+}
