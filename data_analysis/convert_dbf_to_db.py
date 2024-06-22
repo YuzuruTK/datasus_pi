@@ -2,16 +2,21 @@ import csv
 import os
 import duckdb
 import time
+import pandas as pd
 from dbfread import DBF
 
 # Diretório dos arquivos em DBF
-dbf_directory = "./output_dbf/"
+dbf_directory = "./data_analysis/output_dbf/dbf/"
+aux_directory = "./data_analysis/output_dbf/aux/"
 # Diretório onde vai ficar a base de dados
-output_directory = "./database/"
+output_directory = "./data_analysis/database/"
+sql_creation_file_location = "./data_analysis/database_creation.sql"
 # Nome da tabela principal
 table_name = "psicossocial"
 # Nome do arquivo da Database
 database_name = "database_pi"
+# Ano que começou a base
+database_year = 2013
 
 # Caso o arquivo exista, deleta ele
 if os.path.exists(f"{output_directory}/{database_name}.db"):
@@ -24,9 +29,11 @@ if not os.path.exists(output_directory):
 database = duckdb.connect(f"{output_directory}/{database_name}.db") 
 
 # Lista o nome dos arquivos DBF na pasta
-dbf_db_files = [f for f in os.listdir(dbf_directory) if f.endswith('.dbf')]
+dbf_db_files = []
+dbf_db_files = [f for f in os.listdir(dbf_directory) if f.lower().endswith('.dbf')]
 # Lista o nome dos arquivos CSV na pasta auxiliar
-aux_db_files = [f for f in os.listdir(dbf_directory+"/aux") if f.endswith('.csv')]
+aux_db_files = []
+aux_db_files = [f for f in os.listdir(aux_directory) if f.lower().endswith('.csv')]
 
 # Contador pra ver quantos arquivos foram convertidos
 counter = 0
@@ -40,13 +47,14 @@ for csv_name in aux_db_files:
     # cria a tabela para o cnv que é um csv agora, e coloca o Código como chave primária
     database.sql(f"CREATE TABLE {name.lower()} (ID integer, descricao TEXT, Codigo Text, Primary Key (Codigo));")
     # Importa os dados pra dentro da tabela
-    database.sql(f"INSERT INTO {name.lower()} SELECT * FROM read_csv('{dbf_directory}aux/{csv_name}');")
+    database.sql(f"INSERT INTO {name.lower()} SELECT * FROM read_csv('{aux_directory}{csv_name}');")
     print(f"\r{counter}/{len(aux_db_files)} {round((counter/len(aux_db_files))*100, 2)}%",end="",)
 print(f"\nTempo total para inserção de todas os dados no BD {round(time.time() - total_time, 2)} segundos")
 
-aux_db_files = [f for f in os.listdir(dbf_directory+"/aux") if f.lower().endswith('.dbf')]
+aux_db_files = []
+aux_db_files = [f for f in os.listdir(aux_directory) if f.lower().endswith('.dbf')]
 
-# Contador pra ver quantos arquivos foram convertidos
+# Contador pra ver quantos arquivos foram convertidosKubernetes é um sistema de orquestração de contêineres open-source que automatiza a implantação, o dimensionamento e a gestão de aplicações em contêineres. Ele foi originalmente projetado pelo Google e agora é mantido pela Cloud Native Computing Foundation. Wikipédia
 counter = 0
 # Tempo inicial para pegar o tempo total que ficou convertendo e importando
 total_time = time.time()
@@ -55,7 +63,7 @@ for csv_name in aux_db_files:
     counter += 1
     # pega o nome do arquivo sem extensão
     name = csv_name[:-4]
-    table = DBF(f'{dbf_directory}aux/{csv_name}', 'latin-1')
+    table = DBF(f'{aux_directory}{csv_name}', 'latin-1')
     csv_path = f"{output_directory}/{name}.csv"
     # Abre um CSV e joga todo as coisas do DBF para o CSV
     with open(csv_path, "w", newline="") as csv_file:
@@ -72,7 +80,7 @@ for csv_name in aux_db_files:
 print(f"\nTempo total para inserção de todas os dados no BD {round(time.time() - total_time, 2)} segundos")
 
 # Abre o arquivo SQL da criação da tabela principal dos DBFs
-fd = open('database_creation.sql', 'r')
+fd = open(sql_creation_file_location, 'r')
 # Cospe todo o arquivo na variavel
 sqlFile = fd.read()
 # fecha o arquivo ufa
@@ -108,10 +116,8 @@ for dbf_name in dbf_db_files:
     # Mostra o progresso
     print(f"\r{counter}/{len(dbf_db_files)} {round((counter/len(dbf_db_files))*100, 2)}%   ----  Tempo demorado no ultimo arquivo: {round(time.time() - start_time, 2)} segundos",end="",)
 # Adicionado todos os DBFs na tabela
-database.close()
+
 # Mostra o tempo total de importação
 total_time = time.time() - total_time
 total_time = f"{round(total_time, 2)} segundos" if total_time < 60 else f"{round(total_time/60, 2)} minutos"
 print(f"\nTempo total para inserção de todas os dados no BD {total_time}")
-
-print("Criação dos Indexes na base para uma Consulta mais rápida (ISSO FARÁ COM QUE A BASE DE DADOS SEJA INUTILIZAVEL PARA A TRANSAÇÃO DE DADOS)")

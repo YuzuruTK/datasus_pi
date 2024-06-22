@@ -24,29 +24,29 @@ import os
 #
 def parse_cnv_line(line):
     return (
-        str(line[:7]),
+        str(line[:7]).lstrip(),
         # str(line[8:14]),
-        str(line[9:60]), # str(line[15:59]),
-        str(line[61:-1]) # Remove \n
+        str(line[9:59]).lstrip(), # str(line[15:59]),
+        str(line[60:-1]).lstrip() # Remove \n
     )
 
 def cnv_to_csv(cnv_path):
     csv_path = ''.join(os.path.splitext(cnv_path)[:-1]) + '.csv'
-    with open(cnv_path, 'r', encoding='iso8859-1') as cnv_file:
+    # encoding='iso8859-1'
+    with open(cnv_path, 'r') as cnv_file:
         #? Read lines skipping header and last blank line
-        cnv_lines = cnv_file.readlines()[:-1]
+        cnv_lines = cnv_file.readlines()
         csv_lines = ['"ID","Descricao","Codigo"']
 
         for line in cnv_lines:
+            # print(line)
             fields = parse_cnv_line(line)
-
             # Convert to .csv
             fields = map(lambda field: '"' + field.strip() + '"', fields)
             csv_lines.append(','.join(fields))
 
         # Write .csv
-        csv_path = ''.join(os.path.splitext(cnv_path)[:-1]) + '.csv'
-        with open(csv_path, 'w', encoding='iso8859-1') as csv_file:
+        with open(csv_path, 'w') as csv_file:
             csv_file.writelines(line + '\n' for line in csv_lines)
 
 help_msg = 'Usage: ./cnv2csv file.cnv'

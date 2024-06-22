@@ -3,8 +3,8 @@ import time
 
 print()
 
-data_directory = "data_analysis/raw_data/"
-aux_directory = f"{data_directory}aux/"
+data_directory = "data_analysis/raw_data/dbc/"
+aux_directory = "data_analysis/raw_data/aux/"
 data_output = "data_analysis/output_dbf/"
 tools_directory = "data_analysis/tools/"
 
