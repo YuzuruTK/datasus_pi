@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+<header>{% include 'navbar.html' %}</header>
+
+<section class="container p-4">
+    <div class="columns">
+        <div class="column is-6">
+            <br>
+            <a class="is-size-1 column rozha-one-regular">Sobre a NEURODATA</a>
+            <p class="rozha-one-regular is-size-5">
+                A NeuroData surgiu a partir da disciplina de Projeto Integrador: 
+                Ciência de Dados e Analytics, da Universidade Regional do Noroeste do Estado do Rio Grande do Sul - Unijuí.
+                  O Projeto foi desenvolvido por estudantes do 5º módulo dos cursos de Ciência da Computação e de Jornalismo. 
+            </p>
+            <p class="rozha-one-regular is-size-5">
+                A partir das demandas da Secretaria de Saúde do município de Ijuí, 
+                o grupo desenvolveu uma análise sobre o cenário psicossocial da população ijuiense. 
+                Para isso, foram utilizadas as bases de dados dos atendimentos realizados pelos Centros de Atenção Psicossocial (CAPS) da cidade, 
+                disponibilizadas pelo DATASUS. 
+            </p>
+            <p class="rozha-one-regular is-size-5">
+                O objetivo final deste projeto é apresentar às pessoas dados relacionados à saúde mental de uma forma acessível e de fácil compreensão.
+                 Além disso, as entrevistas com especialistas desta área foram realizadas para trazer embasamento teórico
+                  de pessoas que possuem experiência de atuação na promoção da saúde mental.
+            </p>
+
+
+        </div>
+        <div class="column">
+            <img src="{{ url_for('static', filename='icons/output/1.png')}} " alt="Logo" class="logo-image"/>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+</section>
+
+
+
+{% endblock %}

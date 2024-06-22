@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+``{% block title %}Resultados{% endblock %}
+
+{% block content %}
+<header>{% include 'navbar.html' %}</header>
+
+<section class="section">
+    <div class="container is-mobile">
+        {% for i in range(0, images|length, 3) %}
+            <div class="columns">
+                {% for image in images[i:i+3] %}
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image has-ratio">
+                                <img src="{{ url_for('static', filename='graphs/' ~ image) }}" alt="{{ image }}" class="image-thumbnail" data-index="{{ loop.index0 }}">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+<!-- Modal para visualização de imagem -->
+
+<div id="image-modal" class="modal">
+    <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <figure class="image">
+                    <img id="modal-image" class="image-fullscreen" src="" alt="">
+                </figure>
+            </div>
+            
+        </div>
+    <button class="modal-close button is-warning is-large" aria-label="close"></button>
+    <div class="columns mt-3">
+        <button class="column modal-prev button is-primary is-light mr-6 ml-6" aria-label="previous">Anterior</button>4
+        <button class="column modal-next button is-primary is-light mr-6 ml-6" aria-label="next">Próximo</button>
+    </div>  
+</div>
+
+            
+            
+<script src="{{ url_for('static', filename='js/image-full.js') }}"></script>
+          
+
+
+{%endblock%}

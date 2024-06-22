@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+/*! bulma.io v1.0.0 | MIT License | github.com/jgthms/bulma */
+
+
+
+$purple: #8771D9;
+$yellow: #EDCF6D;
+$light-blue: #A1C7CF;
+$dark-blue: #1B3059;
+$beige: #F5EEE6;
+
+/* Substituir as cores padrão do Bulma */
+@use "sass" with (
+$primary: $purple,
+$warning: $yellow,
+$success: $light-blue,
+$info: $dark-blue,
+);
+
+
+
+
+.button {
+  border-radius: 50px; 
+  border: 2px solid black;  // Valor alto para garantir que o botão seja completamente arredondado
+}
+
+.logo-image {
+  width: 20vw; // Valor padrão para desktop
+  // margin: 50px;
+
+  @media (max-width: 768px) { // Ponto de quebra para dispositivos móveis
+    width: 50vw;
+  }
+}
+
+
+
+/* Estilos personalizados */
+.custom-beige-background{
+    background-color: $beige;
+
+}
+.custom-gradient-background {
+    background: linear-gradient(
+      to right,
+      #d1c8ed,  /* Cor 1 */
+      #dbf9ff,  /* Cor 2 */
+      $beige   /* Cor 3 */
+    );
+  }
+  .navbar {
+    display: flex;
+    align-content: center;
+    justify-content: right;
+  }
+  .navbar .navbar-menu {
+    flex-grow: initial;
+    flex-shrink: initial;
+  }
+
+
+  .time-display {
+    display: flex;
+    height: 100%;
+    padding: 0 10px;      
+    font-size: 12px;
+    color: #000;
+    white-space: nowrap;
+    align-items: center;
+  }
+  
+  .audio-player-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    height: 24px;
+  }
+  
+  #play-pause {
+    filter: saturate(0);
+    padding:  0 10px;
+  }
+  
+  #play-pause:hover {
+    text-decoration: none;
+  }
+  
+  .audio-player-wrapper > .progress-bar-container {
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .progress-bar-container > .progress {
+    margin: 0;
+    cursor: pointer;
+  }
+  p.remove-margin-bottom {
+      margin-bottom: 0;
+  }
+  
+
+// .modal-next,
+// .modal-prev {
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+// //   background: rgba(0, 0, 0, 0.5);
+// //   color: white;
+// //   border: none;
+//   padding: 10px;
+//   cursor: pointer;
+// }
+
+// .modal-next {
+//   right: 10px;
+// }
+
+// .modal-prev {
+//   left: 10px;
+// }
+// .modal-content .image img {
+//     width: auto;
+//     height: auto;
+//     max-width: 100;
+//     max-height: 100vh;
+//     display: block;
+//     margin: 0 auto;
+//   }
+
+.image-fullscreen {
+  max-height: 80vh;  // 80% da altura da viewport
+  max-width: 100vw;  // 100% da largura da viewport
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;  // Mantém a proporção da imagem
+}
+
+
+.is-size-giga {
+  font-size: clamp(3rem, 20vw, 8rem); // Mínimo 2rem, escalável até 8vw, máximo 8rem
+}
+.is-size-g {
+  font-size: clamp(2rem, 13vw, 5rem); // Mínimo 1rem, escalável até 5vw, máximo 5rem
+}
+.is-size-mini {
+  font-size: clamp(1rem, 5vw, 2rem);
+}
+
+.rozha-one-regular {
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $dark-blue;
+}
+.rozha-one-regular-light {
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $beige;
+}
+
+.img-min-width {
+  width: 35vw; // Define a largura mínima como 45% da viewport
+  max-width: 25%; // A largura máxima é o tamanho original da imagem
+  max-height: auto; // Mantém a proporção da imagem
+}
+
+.person-img{
+  margin-left: 25%;
+  width: clamp(25%, 50%, 100%);
+}
