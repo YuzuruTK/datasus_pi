@@ -12,7 +12,7 @@ app = Flask(__name__)
 def get_body_class(route):
     # Dicionário de rotas para classes
     route_classes = {
-        '/': 'custom-beige-background',
+        '/': 'is-white',
         '/sobre': 'custom-beige-background',
         '/materia/nome-da-materia': 'custom-gradient-background'
         # Adicione outras rotas e classes conforme necessário
