@@ -1,3 +1,13 @@
+# Este repositorio se destina apenas para dar deploy do site usando o serviço Render.com
+## O repositorio oficial esta hospedado no seguinte link
+
+https://github.com/YuzuruTK/datasus_pi
+
+
+
+
+
+
 # First Commit
 
 Este é o trabalho incrivel de PI trabalhando com o Datasus
