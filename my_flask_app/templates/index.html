@@ -8,20 +8,24 @@
 
 
 
-<section class="hero custom-gradient-background is-fullheight">
-  <header>{% include 'navbar.html' %}</header>
-    <div class="hero-body">
-
-      <div class="columns is-desktop">
-        <figure class="image column logo-image">
-          <img src="{{ url_for('static', filename='icons/output/1.png')}} " alt="Logo" class=""/>
-        </figure>
-
-        <div class="is-align-content-center"><p class="is-size-1 column rozha-one-regular">Análise do Cenário Psicossocial da População Ijuiense</p></div>
+<section class="hero is-fullheight">
+    
+  <div class="custom-gradient-background">
+    <header>{% include 'navbar.html' %}</header>
+      <div class="hero-body ">
+        <div class="columns is-desktop">
+          <figure class="image column logo-image">
+            <img src="{{ url_for('static', filename='icons/output/1.png')}} " alt="Logo" class=""/>
+          </figure>
+          <div class="is-align-content-center"><p class="is-size-1 column rozha-one-regular">Análise do Cenário Psicossocial da População Ijuiense</p></div>
+        </div>
       </div>
+  </div>
+    <div class="hero-foot">
+      <img src="{{ url_for('static', filename='photos/blue-line.png')}}" alt="Arrow" />
+
     </div>
 </section>
-<img src="{{ url_for('static', filename='photos/blue-line.png')}}" alt="Arrow" />
 
 <div class="p-4">
   <section class="container ">

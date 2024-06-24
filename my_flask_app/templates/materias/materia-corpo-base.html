@@ -1,0 +1,73 @@
+
+{% extends "base.html" %}
+
+{% block title %}Materia pq slaoq kakakakakakka | Neuro Data - Análise do Cenário Psicossocial da População Ijuiense{% endblock %}
+
+{% block content %}
+
+<header>{% include 'navbar.html' %}</header>
+
+
+<section class="hero">
+    <!-- <div class="hero-body"> -->
+        <img src=" {{ url_for('static', filename='photos/cigarronasescolas.png')}}" class="image is-3by1">
+    <!-- </div> -->
+</section>
+<section class="container p-4">
+    
+
+    <p class="rozha-one-regular is-size-1">Título título da matéria Título da materia</p>
+    <p class="rozha-one-regular">Para que os dados públicos alcancem os cidadãos comuns, 
+        são necessárias uma série de práticas comunicacionais que direcionam seus esforços 
+        para democratizar o acesso a essas informações.
+    </p>
+
+    <div class="card custom-beige-background is-shadowless">
+        <div class="card-content columns">
+            <div class="column is-narrow">
+                <figure class="image is-128x128">
+                    <img class="is-rounded" src="https://bulma.io/assets/images/placeholders/128x128.png" />
+                </figure>
+            </div>
+            <div class="column ">
+                <div class="content rozha-one-regular">
+                    Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec
+                    id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus
+                    et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis
+                    consectetur purus sit amet fermentum.
+                </div>
+            </div>
+        </div>
+      </div>
+      <p class="rozha-one-regular">O presente trabalho foi desenvolvido na disciplina “Projeto Integrador: Ciência de Dados e Analytics”, que integra o 5º módulo dos cursos de Ciência da Computação, Jornalismo e Publicidade e Propaganda da Universidade Regional do Noroeste do Estado do Rio Grande do Sul – UNIJUÍ. A Secretaria de Saúde do município de Ijuí foi a demandante para a realização das atividades.
+
+        Para tanto, foi proposto aos estudantes o desafio de desenvolver um modelo analítico capaz de identificar padrões e tendências relevantes, ao levar em consideração os dados disponibilizados pelo Departamento de Informática do Sistema Único de Saúde (DATASUS). O projeto teve, ainda, que propor métricas úteis para monitorar e melhorar a eficácia das políticas de saúde.
+      </p>
+
+        <div class="audio-player box">
+            <div class="audio-title rozha-one-regular ">Your Audio Title</div>
+            <div class="audio-player-wrapper">
+            <button id="play-pause" class="is-ghost">▶</button>
+            <div class="progress-bar-container" id="progress-bar-container">
+                <progress class="progress is-small" id="progress-bar" value="0" max="100"></progress>
+                <div class="time-display" id="time-display">
+                <span id="cur-time-audio-player" class="rozha-one-regular">0:00</span> /
+                <span id="max-time-audio-player" class="rozha-one-regular">0:00</span>
+                </div>
+            </div>
+            </div>
+            <audio id="audio">
+            <source src="{{ url_for('static', filename='audio/ugao.mp3')}}" type="audio/mp3">
+            Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <p class="rozha-one-regular">Em uma reunião, que contou com a participação dos alunos e dos professores, o secretário de saúde, Márcio Strassburger, abordou a necessidade de haver mais informações relacionadas à condição da saúde mental da população ijuiense. Dessa forma, o grupo debruçou-se em estudar o cenário psicossocial do município nos últimos dez anos e, para isso, utilizou os dados de atendimentos realizados pelos Centros de Atenção Psicossocial (CAPS) da cidade. No momento, existem três CAPS em Ijuí: AD II, especializado em atender pessoas que possuem dependência química e problemas decorrentes do uso e do abuso de álcool; já o CAPS II presta assistência àqueles que possuem problemas mentais graves e persistentes. Por fim, o CAPS i, ou Infantil, auxilia crianças e adolescentes que também são acometidos pelos fatores mencionados anteriormente
+        </p>
+
+</section>
+
+
+
+
+{%endblock%}

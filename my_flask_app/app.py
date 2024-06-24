@@ -16,6 +16,8 @@ def get_body_class(route):
         '/sobre': 'custom-beige-background',
         '/resultados': 'custom-beige-background',
         '/materia/nome-da-materia': 'custom-gradient-background',
+        '/materia/base-materia-template': 'custom-beige-background',
+        '/feed': 'custom-beige-background',
         # Adicione outras rotas e classes conforme necessário
     }
     return route_classes.get(route, 'default-class')
@@ -31,6 +33,10 @@ def materiaTeste():
         body_class = get_body_class(request.path)
         return render_template('materias/materia-teste.html', body_class=body_class)
 
+@app.route('/materia/base-materia-template')
+def materiaCorpoBase():
+        body_class = get_body_class(request.path)
+        return render_template('materias/materia-corpo-base.html', body_class=body_class)
 
 @app.route('/sobre')
 def about():
@@ -56,7 +62,8 @@ def pesquisaResults():
 
 @app.route('/feed')
 def feed():
-    return render_template('feed.html')
+    body_class = get_body_class(request.path)
+    return render_template('feed.html', body_class=body_class)
 
 @app.errorhandler(404)
 def page_not_found(e):

@@ -22482,7 +22482,6 @@ has-background-danger.is-hoverable:active {
   height: 100%;
   padding: 0 10px;
   font-size: 12px;
-  color: #000;
   white-space: nowrap;
   align-items: center;
 }
