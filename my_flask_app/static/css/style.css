@@ -22440,6 +22440,11 @@ has-background-danger.is-hoverable:active {
   border: 2px solid black;
 }
 
+.round-borders {
+  border: 3px solid #1B3059;
+  border-radius: 30px;
+}
+
 .logo-image {
   min-width: 25%;
   width: 20vw;
@@ -22559,6 +22564,22 @@ p.remove-margin-bottom {
 .person-img {
   margin-left: 25%;
   width: 50%;
+}
+
+.notification-custom {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.column-container {
+  position: relative;
+  padding-bottom: 4rem;
+}
+.column-container .button-bottom {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*# sourceMappingURL=style.css.map */

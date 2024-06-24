@@ -25,6 +25,10 @@ $info: $dark-blue,
   border-radius: 50px; 
   border: 2px solid black;  // Valor alto para garantir que o botão seja completamente arredondado
 }
+.round-borders {
+  border: 3px solid $dark-blue;
+  border-radius: 30px;
+}
 
 .logo-image {
   min-width: 25%;
@@ -179,4 +183,22 @@ $info: $dark-blue,
 .person-img{
   margin-left: 25%;
   width: clamp(25%, 50%, 100%);
+}
+
+.notification-custom {
+  max-width: 400px;
+  margin: 0 auto; // Opcional: centraliza a notificação dentro de seu contêiner
+}
+
+
+.column-container {
+  position: relative;
+  padding-bottom: 4rem; // Espaco para o botão
+
+  .button-bottom {
+      position: absolute;
+      bottom: 1rem; // Ajuste conforme necessário
+      left: 50%;
+      transform: translateX(-50%);
+  }
 }

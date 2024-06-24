@@ -14,7 +14,8 @@ def get_body_class(route):
     route_classes = {
         '/': 'is-white',
         '/sobre': 'custom-beige-background',
-        '/materia/nome-da-materia': 'custom-gradient-background'
+        '/resultados': 'custom-beige-background',
+        '/materia/nome-da-materia': 'custom-gradient-background',
         # Adicione outras rotas e classes conforme necessário
     }
     return route_classes.get(route, 'default-class')
@@ -49,7 +50,8 @@ def blog():
 
 @app.route('/resultados')
 def pesquisaResults():
-    return render_template('pesquisa-results.html')
+    body_class = get_body_class(request.path)
+    return render_template('pesquisa-results.html', body_class=body_class)
 
 
 @app.route('/feed')
