@@ -38,7 +38,7 @@ def get_body_class(route):
         '/': 'is-white',
         '/sobre': 'custom-beige-background',
         '/resultados': 'custom-beige-background',
-        '/materia/nome-da-materia': 'custom-gradient-background',
+        '/materias-jornalisticas': 'custom-gradient-background',
         '/materia/base-materia-template': 'custom-beige-background',
         '/feed': 'custom-beige-background',
         # Adicione outras rotas e classes conforme necessário
@@ -50,7 +50,7 @@ def index():
     body_class = get_body_class(request.path)
     return render_template('index.html', css_file='style.css', body_class=body_class)
 
-@app.route('/materia/nome-da-materia')
+@app.route('/materias-jornalisticas')
 def materiaTeste():
     body_class = get_body_class(request.path)
     return render_template('materias/materia-teste.html', body_class=body_class)
