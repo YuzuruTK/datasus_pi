@@ -1,0 +1,317 @@
+.
+├── audio
+│   └── ugao.mp3
+├── bulma
+│   ├── bulma.css
+│   ├── bulma.css.map
+│   ├── bulma.scss
+│   ├── css
+│   │   ├── bulma.css
+│   │   ├── bulma.css.map
+│   │   ├── bulma.min.css
+│   │   ├── bulma-no-dark-mode.min.css
+│   │   ├── bulma-no-dark-mode.min.css.map
+│   │   └── versions
+│   │       ├── bulma-no-helpers.min.css
+│   │       ├── bulma-no-helpers.min.css.map
+│   │       ├── bulma-no-helpers-prefixed.min.css
+│   │       ├── bulma-no-helpers-prefixed.min.css.map
+│   │       ├── bulma-prefixed.min.css
+│   │       └── bulma-prefixed.min.css.map
+│   ├── LICENSE
+│   ├── package.json
+│   ├── README.md
+│   ├── sass
+│   │   ├── base
+│   │   │   ├── animations.css
+│   │   │   ├── animations.css.map
+│   │   │   ├── animations.scss
+│   │   │   ├── generic.css
+│   │   │   ├── generic.css.map
+│   │   │   ├── generic.scss
+│   │   │   ├── _index.scss
+│   │   │   ├── minireset.css
+│   │   │   ├── minireset.css.map
+│   │   │   ├── minireset.scss
+│   │   │   ├── skeleton.css
+│   │   │   ├── skeleton.css.map
+│   │   │   └── skeleton.scss
+│   │   ├── components
+│   │   │   ├── breadcrumb.css
+│   │   │   ├── breadcrumb.css.map
+│   │   │   ├── breadcrumb.scss
+│   │   │   ├── card.css
+│   │   │   ├── card.css.map
+│   │   │   ├── card.scss
+│   │   │   ├── dropdown.css
+│   │   │   ├── dropdown.css.map
+│   │   │   ├── dropdown.scss
+│   │   │   ├── _index.scss
+│   │   │   ├── menu.css
+│   │   │   ├── menu.css.map
+│   │   │   ├── menu.scss
+│   │   │   ├── message.css
+│   │   │   ├── message.css.map
+│   │   │   ├── message.scss
+│   │   │   ├── modal.css
+│   │   │   ├── modal.css.map
+│   │   │   ├── modal.scss
+│   │   │   ├── navbar.css
+│   │   │   ├── navbar.css.map
+│   │   │   ├── navbar.scss
+│   │   │   ├── pagination.css
+│   │   │   ├── pagination.css.map
+│   │   │   ├── pagination.scss
+│   │   │   ├── panel.css
+│   │   │   ├── panel.css.map
+│   │   │   ├── panel.scss
+│   │   │   ├── tabs.css
+│   │   │   ├── tabs.css.map
+│   │   │   └── tabs.scss
+│   │   ├── elements
+│   │   │   ├── block.css
+│   │   │   ├── block.css.map
+│   │   │   ├── block.scss
+│   │   │   ├── box.css
+│   │   │   ├── box.css.map
+│   │   │   ├── box.scss
+│   │   │   ├── button.css
+│   │   │   ├── button.css.map
+│   │   │   ├── button.scss
+│   │   │   ├── content.css
+│   │   │   ├── content.css.map
+│   │   │   ├── content.scss
+│   │   │   ├── delete.css
+│   │   │   ├── delete.css.map
+│   │   │   ├── delete.scss
+│   │   │   ├── icon.css
+│   │   │   ├── icon.css.map
+│   │   │   ├── icon.scss
+│   │   │   ├── image.css
+│   │   │   ├── image.css.map
+│   │   │   ├── image.scss
+│   │   │   ├── _index.scss
+│   │   │   ├── loader.css
+│   │   │   ├── loader.css.map
+│   │   │   ├── loader.scss
+│   │   │   ├── notification.css
+│   │   │   ├── notification.css.map
+│   │   │   ├── notification.scss
+│   │   │   ├── progress.css
+│   │   │   ├── progress.css.map
+│   │   │   ├── progress.scss
+│   │   │   ├── table.css
+│   │   │   ├── table.css.map
+│   │   │   ├── table.scss
+│   │   │   ├── tag.css
+│   │   │   ├── tag.css.map
+│   │   │   ├── tag.scss
+│   │   │   ├── title.css
+│   │   │   ├── title.css.map
+│   │   │   └── title.scss
+│   │   ├── form
+│   │   │   ├── checkbox-radio.css
+│   │   │   ├── checkbox-radio.css.map
+│   │   │   ├── checkbox-radio.scss
+│   │   │   ├── file.css
+│   │   │   ├── file.css.map
+│   │   │   ├── file.scss
+│   │   │   ├── _index.scss
+│   │   │   ├── input-textarea.css
+│   │   │   ├── input-textarea.css.map
+│   │   │   ├── input-textarea.scss
+│   │   │   ├── select.css
+│   │   │   ├── select.css.map
+│   │   │   ├── select.scss
+│   │   │   ├── shared.css
+│   │   │   ├── shared.css.map
+│   │   │   ├── shared.scss
+│   │   │   ├── tools.css
+│   │   │   ├── tools.css.map
+│   │   │   └── tools.scss
+│   │   ├── grid
+│   │   │   ├── columns.css
+│   │   │   ├── columns.css.map
+│   │   │   ├── columns.scss
+│   │   │   ├── columns-v2.css
+│   │   │   ├── columns-v2.css.map
+│   │   │   ├── columns-v2.scss
+│   │   │   ├── grid.css
+│   │   │   ├── grid.css.map
+│   │   │   ├── grid.scss
+│   │   │   └── _index.scss
+│   │   ├── helpers
+│   │   │   ├── aspect-ratio.css
+│   │   │   ├── aspect-ratio.css.map
+│   │   │   ├── aspect-ratio.scss
+│   │   │   ├── border.css
+│   │   │   ├── border.css.map
+│   │   │   ├── border.scss
+│   │   │   ├── color.css
+│   │   │   ├── color.css.map
+│   │   │   ├── color.scss
+│   │   │   ├── flexbox.css
+│   │   │   ├── flexbox.css.map
+│   │   │   ├── flexbox.scss
+│   │   │   ├── float.css
+│   │   │   ├── float.css.map
+│   │   │   ├── float.scss
+│   │   │   ├── gap.css
+│   │   │   ├── gap.css.map
+│   │   │   ├── gap.scss
+│   │   │   ├── _index.scss
+│   │   │   ├── other.css
+│   │   │   ├── other.css.map
+│   │   │   ├── other.scss
+│   │   │   ├── overflow.css
+│   │   │   ├── overflow.css.map
+│   │   │   ├── overflow.scss
+│   │   │   ├── position.css
+│   │   │   ├── position.css.map
+│   │   │   ├── position.scss
+│   │   │   ├── spacing.css
+│   │   │   ├── spacing.css.map
+│   │   │   ├── spacing.scss
+│   │   │   ├── typography.css
+│   │   │   ├── typography.css.map
+│   │   │   ├── typography.scss
+│   │   │   ├── visibility.css
+│   │   │   ├── visibility.css.map
+│   │   │   └── visibility.scss
+│   │   ├── _index.scss
+│   │   ├── layout
+│   │   │   ├── container.css
+│   │   │   ├── container.css.map
+│   │   │   ├── container.scss
+│   │   │   ├── footer.css
+│   │   │   ├── footer.css.map
+│   │   │   ├── footer.scss
+│   │   │   ├── hero.css
+│   │   │   ├── hero.css.map
+│   │   │   ├── hero.scss
+│   │   │   ├── _index.scss
+│   │   │   ├── level.css
+│   │   │   ├── level.css.map
+│   │   │   ├── level.scss
+│   │   │   ├── media.css
+│   │   │   ├── media.css.map
+│   │   │   ├── media.scss
+│   │   │   ├── section.css
+│   │   │   ├── section.css.map
+│   │   │   └── section.scss
+│   │   ├── themes
+│   │   │   ├── dark.css
+│   │   │   ├── dark.css.map
+│   │   │   ├── dark.scss
+│   │   │   ├── _index.scss
+│   │   │   ├── light.css
+│   │   │   ├── light.css.map
+│   │   │   ├── light.scss
+│   │   │   ├── setup.css
+│   │   │   ├── setup.css.map
+│   │   │   └── setup.scss
+│   │   └── utilities
+│   │       ├── controls.css
+│   │       ├── controls.css.map
+│   │       ├── controls.scss
+│   │       ├── css-variables.css
+│   │       ├── css-variables.css.map
+│   │       ├── css-variables.scss
+│   │       ├── derived-variables.css
+│   │       ├── derived-variables.css.map
+│   │       ├── derived-variables.scss
+│   │       ├── extends.css
+│   │       ├── extends.css.map
+│   │       ├── extends.scss
+│   │       ├── functions.css
+│   │       ├── functions.css.map
+│   │       ├── functions.scss
+│   │       ├── _index.scss
+│   │       ├── initial-variables.css
+│   │       ├── initial-variables.css.map
+│   │       ├── initial-variables.scss
+│   │       ├── mixins.css
+│   │       ├── mixins.css.map
+│   │       └── mixins.scss
+│   └── versions
+│       ├── bulma-no-dark-mode.css
+│       ├── bulma-no-dark-mode.css.map
+│       ├── bulma-no-dark-mode.scss
+│       ├── bulma-no-helpers.css
+│       ├── bulma-no-helpers.css.map
+│       ├── bulma-no-helpers-prefixed.css
+│       ├── bulma-no-helpers-prefixed.css.map
+│       ├── bulma-no-helpers-prefixed.scss
+│       ├── bulma-no-helpers.scss
+│       ├── bulma-prefixed.css
+│       ├── bulma-prefixed.css.map
+│       └── bulma-prefixed.scss
+├── css
+│   ├── style.css
+│   └── style.css.map
+├── custom.css
+├── favicon.png
+├── graphs
+│   ├── atendimento_depre_sex.png
+│   ├── atendimentos_depressao_faixa_etaria.png
+│   ├── atendimentos_depressao_idade_2.png
+│   ├── atendimentos_depressao_idade.png
+│   ├── atendimentos_depressao_racacor.png
+│   ├── atendimentos_depressao_sexo.png
+│   ├── atendimentos_estabelecimento.png
+│   ├── atendimentos_por_caps.png
+│   ├── atendimentos_por_caps_por_faixa_etaria.png
+│   ├── doenca_mais_frequente_por_faixa_etaria.png
+│   ├── doenca_mais_frequente_por_idade.png
+│   ├── faixa_etaria_casos_geral.png
+│   ├── numero_de_atendimentos_por_depressão_faixa_etaria.png
+│   ├── Permanencia_por_doenca.png
+│   ├── quantidade_atendimentos_faixa_etaria_pizza.png
+│   ├── quantidade_atendimentos_faixa_etaria.png
+│   └── top-3-doencas.png
+├── icons
+│   ├── image.fish
+│   ├── Mail-Icon.png
+│   ├── Map-Icon.png
+│   ├── output
+│   │   ├── 1.png
+│   │   ├── 2.png
+│   │   ├── 3.png
+│   │   ├── 4.png
+│   │   ├── 5.png
+│   │   ├── 6.png
+│   │   ├── 7.png
+│   │   ├── 8.png
+│   │   └── 9.png
+│   └── Phone-Icon.png
+├── js
+│   ├── audio_script.js
+│   ├── image-full.js
+│   └── scripts.js
+├── photos
+│   ├── blue-line.png
+│   ├── cigarronasescolas.png
+│   ├── female.png
+│   ├── insta
+│   │   ├── post-1
+│   │   │   ├── 10.png
+│   │   │   ├── 5.png
+│   │   │   ├── 6.png
+│   │   │   ├── 7.png
+│   │   │   ├── 8.png
+│   │   │   └── 9.png
+│   │   └── post-2
+│   ├── integrantes
+│   │   ├── Fernanda.png
+│   │   ├── Gabriela.png
+│   │   ├── GabrielBuron.png
+│   │   ├── GabrielDs.png
+│   │   ├── Juan.png
+│   │   ├── Keila.png
+│   │   └── Mariana.png
+│   ├── Logo-NeuroData-modelo-3.gif
+│   ├── male.png
+│   └── rs-ijui.png
+└── tree.txt
+
+26 directories, 289 files

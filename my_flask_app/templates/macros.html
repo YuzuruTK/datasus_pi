@@ -1,0 +1,17 @@
+<!-- templates/macros.html -->
+{% macro render_carousel(folder) %}
+    {% set image_folder = 'static/photos/insta/' + folder %}
+    {% set images = [] %}
+    {% for image in os.listdir(image_folder) if image.endswith('.png') %}
+        {% set images = images + [image] %}
+    {% endfor %}
+    {% set images = images|sort(attribute='int(splitext(image)[0])') %}
+    
+    <div class="carousel">
+        {% for image in images %}
+        <div>
+            <img src="{{ url_for('static', filename='photos/insta/' ~ folder ~ '/' ~ image) }}" alt="Instagram image">
+        </div>
+        {% endfor %}
+    </div>
+{% endmacro %}

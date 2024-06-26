@@ -22,6 +22,15 @@ def get_body_class(route):
     }
     return route_classes.get(route, 'default-class')
 
+
+def load_images(folder):
+    image_folder = os.path.join(app.static_folder, 'photos', 'insta', folder)
+    if not os.path.exists(image_folder):
+        return []
+    images = [f for f in os.listdir(image_folder) if f.endswith('.png')]
+    images.sort(key=lambda x: int(x.split('.')[0]))
+    return images
+
 @app.route('/')
 def index():
     body_class = get_body_class(request.path)
@@ -63,7 +72,11 @@ def pesquisaResults():
 @app.route('/feed')
 def feed():
     body_class = get_body_class(request.path)
-    return render_template('feed.html', body_class=body_class)
+    post1_images = load_images('post-1')
+    post2_images = load_images('post-2')
+    return render_template('feed.html', body_class=body_class, post1_images=post1_images, post2_images=post2_images)
+
+
 
 @app.errorhandler(404)
 def page_not_found(e):

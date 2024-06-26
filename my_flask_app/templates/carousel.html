@@ -1,0 +1,10 @@
+<!-- templates/carousel.html -->
+{% macro render_carousel(images, folder) %}
+<div class="carousel">
+    {% for image in images %}
+    <div>
+        <img src="{{ url_for('static', filename=folder + '/' + image) }}" alt="Instagram image">
+    </div>
+    {% endfor %}
+</div>
+{% endmacro %}

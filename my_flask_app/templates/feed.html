@@ -1,133 +1,74 @@
-
 {% extends "base.html" %}
 
-{% block title %}feed{% endblock %}
+{% block title %}Feed{% endblock %}
+{% from "carousel.html" import render_carousel %}
 
 {% block content %}
 <header>{% include 'navbar.html' %}</header>
 
-<section class="container p-4 ">
-    </br>
-        <p class="rozha-one-regular is-size-1">Nos acompanhe nas redes sociais</p>
+<section class="container p-4">
+    <br>
+    <p class="rozha-one-regular is-size-1">Nos acompanhe nas redes sociais</p>
     
-        <div class="box custom-beige-background is-shadowless">
+    <div class="columns">
+        <div class="box column">
             <div class="columns">
                 <span class="column is-narrow">
                     <figure class="image is-48x48">
-                        <img src="https://bulma.io/assets/images/placeholders/256x256.png" />
-                      </figure>
+                        <img src="{{ url_for('static', filename='icons/output/1.png')}}" />
+                    </figure>
                 </span>
                 <span class="column">
                     <p class="rozha-one-regular is-size-2">@neuro_data</p>
                 </span>
             </div>
+            <div>{{ render_carousel(post1_images, 'photos/insta/post-1') }}</div>
         </div>
-    
-    <section class="container is-mobile ">
-        <div class="columns ">
-            <div class="card column m-1">
-                <div class="card-image ">
-                <figure class="image is-4by3">
-                    <img
-                    src="https://bulma.io/assets/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                    />
-                </figure>
-                </div>
-                <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
+
+        <div class="box column">
+            <div class="columns">
+                <span class="column is-narrow">
                     <figure class="image is-48x48">
-                        <img
-                        src="https://bulma.io/assets/images/placeholders/96x96.png"
-                        alt="Placeholder image"
-                        />
+                        <img src="{{ url_for('static', filename='icons/output/1.png')}}" />
                     </figure>
-                    </div>
-                    <div class="media-content">
-                    <p class="title is-4">John Smith</p>
-                    <p class="subtitle is-6">@johnsmith</p>
-                    </div>
-                </div>
-    
-                <div class="content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                    iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
-                    <a href="#">#responsive</a>
-                    <br />
-                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                </div>
-                </div>
+                </span>
+                <span class="column">
+                    <p class="rozha-one-regular is-size-2">@neuro_data</p>
+                </span>
             </div>
-            <div class="card column m-1">
-                <div class="card-image">
-                <figure class="image is-4by3">
-                    <img
-                    src="https://bulma.io/assets/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                    />
-                </figure>
-                </div>
-                <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
-                    <figure class="image is-48x48">
-                        <img
-                        src="https://bulma.io/assets/images/placeholders/96x96.png"
-                        alt="Placeholder image"
-                        />
-                    </figure>
-                    </div>
-                    <div class="media-content">
-                    <p class="title is-4">John Smith</p>
-                    <p class="subtitle is-6">@johnsmith</p>
-                    </div>
-                </div>
-    
-                <div class="content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                    iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
-                    <a href="#">#responsive</a>
-                    <br />
-                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                </div>
-                </div>
-            </div>
-            <div class="card column m-1">
-                <div class="card-image">
-                <figure class="image is-4by3">
-                    <img
-                    src="https://bulma.io/assets/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                    />
-                </figure>
-                </div>
-                <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
-                    <figure class="image is-48x48">
-                        <img
-                        src="https://bulma.io/assets/images/placeholders/96x96.png"
-                        alt="Placeholder image"
-                        />
-                    </figure>
-                    </div>
-                    <div class="media-content">
-                    <p class="title is-4">John Smith</p>
-                    <p class="subtitle is-6">@johnsmith</p>
-                    </div>
-                </div>
-    
-                <div class="content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                    iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
-                    <a href="#">#responsive</a>
-                    <br />
-                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                </div>
-                </div>
+            <div>{{ render_carousel(post2_images, 'photos/insta/post-2') }}</div>
+        </div>
+    </div>
+
+    <!-- <section class="container is-mobile">
+        <div class="columns">
+            <div class="column">
+                {% from "carousel.html" import render_carousel %}
+                {{ render_carousel(post1_images, 'photos/insta/post-1') }}
             </div>
         </div>
     </section>
-</section>
-{%endblock%}
+    
+    <section class="container is-mobile">
+        <div class="columns">
+            <div class="column">
+                {{ render_carousel(post2_images, 'photos/insta/post-2') }}
+            </div>
+        </div>
+    </section>
+</section> -->
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(document).ready(function(){
+    $('.carousel').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+});
+</script>
+{% endblock %}
