@@ -33,24 +33,7 @@
     </div>
 </div>
 
-<!-- Modal para visualização de imagem -->
-<div id="image-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-content">
-        <div class="box">
-            <figure class="image">
-                <img id="modal-image" class="image-fullscreen" src="" alt="">
-            </figure>
-        </div>
-    </div>
-    <button class="modal-close button is-warning is-large" aria-label="close"></button>
-    <div class="columns mt-3">
-        <button class="column modal-prev button is-primary is-light mr-6 ml-6" aria-label="previous">Anterior</button>
-        <button class="column modal-next button is-primary is-light mr-6 ml-6" aria-label="next">Próximo</button>
-    </div>  
-</div>
 
-<script src="{{ url_for('static', filename='js/image-full.js') }}"></script>
 <script>
     function toggleContent(gallery_id) {
         var content = document.querySelector('#content-' + gallery_id);
