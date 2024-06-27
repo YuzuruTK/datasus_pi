@@ -6,24 +6,15 @@ https://github.com/YuzuruTK/datasus_pi
 
 
 
-
-
-
-
 =======
 # https://neurodata.onrender.com
 
-# First Commit
+# Sobre
+Este é o Repositório tanto da Análise quanto do Website do nosso Trabalho de PI
 
-Este é o trabalho incrivel de PI trabalhando com o Datasus
+Onde foi desenvolvido um estudo com base na Database Psicossocial do Datasus
 
-Cada vez que voce tiver vontade de se matar mexendo na database, bom
-aumente esse contador aqui em +1
-
-> Vezes que quis me matar graças ao Datasus : 10
-
-
-## Adquirindo os Dados Brutos
+# Adquirindo os Dados Brutos
 > **Requisitos:** python3, wget e unzip.
 
 Começe criando dois diretórios para armazenar os arquivos que serão baixados do DataSus, um para as bases principais e outro para as bases auxiliares:
@@ -40,13 +31,3 @@ $ ./susgrep.sh data data/aux
 > **Erros comuns:**
 > Pacote unzip não está instalado no sistema
 > WSL não reconhece cnv2csv
-
-**Correções:**
-
-```bash
-$ sudo apt install unzip
-```
-
-```bash
-$ dos2unix cnv2csv
-```
