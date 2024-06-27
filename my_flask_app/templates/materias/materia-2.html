@@ -14,7 +14,7 @@ endblock %}
     <img src=" {{ url_for('static', filename='photos/cigarronasescolas.png')}}" class="image is-3by1">
     <!-- </div> -->
 </section>
-<section class="container p-4">
+<section class="container p-4 rozha-one-regular">
 
 
     <p class="rozha-one-regular is-size-1">Ansiedade e transtornos devido ao abuso de álcool, drogas e substâncias
@@ -24,25 +24,44 @@ endblock %}
         à assistência para adultos e 44% para crianças e adolescentes.
     </p>
 
-    <div class="card custom-beige-background is-shadowless">
-        <div class="card-content columns">
-            <div class="column is-narrow">
+
+    <div class="columns">
+        <div class="column is-narrow">
+            <div class="block">
                 <figure class="image is-128x128">
-                    <img class="is-rounded" src="https://bulma.io/assets/images/placeholders/128x128.png" />
+                    <img class="is-rounded" src="{{ url_for('static', filename='photos/integrantes/Keila.png')}}" />
                 </figure>
-            </div>
-            <div class="column ">
-                <div class="content rozha-one-regular">
-                    Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec
-                    id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus
-                    et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis
-                    consectetur purus sit amet fermentum.
-                </div>
+
             </div>
         </div>
+        <div class="column">
+            <a class=" is-size-4 rozha-one-regular">KEILA ROSA</a>
+            <div class="container"><a class=" rozha-one-regular">Estudante de Jornalismo</a></div>
+            <button class="button is-success rozha-one-regular">
+                keila.rosa@sou.unijui.edu.br
+            </button>
+        </div>
+        <div class="column is-narrow">
+            <div class="block">
+                <figure class="image is-128x128">
+                    <img class="is-rounded" src="{{ url_for('static', filename='photos/integrantes/Fernanda.png')}}" />
+                </figure>
+                
+            </div>
+        </div>
+        <div class="column ">
+            <a class=" is-size-4 rozha-one-regular">Fernanda Mulinari Fank</a>
+                <div class="container"><a class=" rozha-one-regular">Estudante de Jornalismo</a></div>
+                <button class="button is-success rozha-one-regular">
+                    fernanda.fank@sou.unijui.edu.br
+                </button>
+        </div>
+
+        
+    
     </div>
 
-    <div class="audio-player box" id="audio-player-1">
+    <!-- <div class="audio-player box" id="audio-player-1">
         <div class="audio-title rozha-one-regular ">Your Audio Title 1</div>
         <div class="audio-player-wrapper">
             <source src="{{ url_for('static', filename='audio/another.mp3')}}" type="audio/mp3">
@@ -60,7 +79,7 @@ endblock %}
             <source src="{{ url_for('static', filename='audio/ugao.mp3')}}" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
-    </div>
+    </div> -->
 
 
     <p>Os CAPS são instituições que integram o Sistema Único de Saúde (SUS) e que prestam serviços gratuitos à
