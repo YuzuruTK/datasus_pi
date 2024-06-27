@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
-{% block title %}Materias Jornalisticas | Neuro Data - Análise do Cenário Psicossocial da População Ijuiense{% endblock %}
+{% block title %}Materias Jornalisticas | Neuro Data - Análise do Cenário Psicossocial da População Ijuiense{% endblock
+%}
 
 {% block content %}
 <header>{% include 'navbar.html' %}</header>
@@ -11,22 +12,23 @@
     <div class="columns is-desktop">
         <div class="column is-half column-container">
             <h3>
-                <p class="rozha-one-regular is-size-g">Titulo Da Materia</p>
+                <p class="rozha-one-regular is-size-1">Saúde mental infantojuvenil: busca por tratamento de crianças e
+                    adolescentes cresce em Ijuí</p>
             </h3>
             <p class="rozha-one-regular">
-                texto introdutório texto introdutório texto introdutório texto introdutório texto introdutório texto
-                introdutório texto introdutório texto introdutório texto introdutório texto introdutório vtexto
-                introdutório texto introdutório vvvtexto introdutório texto introdutório texto introdutório texto
-                introdutório texto introdutório texto introdutório texto introdutório texto introdutório texto
-                introdutório texto introdutório v.
+                O município apresentou curva de aumento de xx% nos atendimentos de crianças e
+                adolescentes no Rio Grande do Sul dos últimos 10 anos.
             </p>
             <p class="rozha-one-regular">
-                texto introdutório texto introdutório texto introdutório texto introdutório texto introdutório texto
-                introdutório texto introdutório texto introdutório texto introdutório texto introdutório vtexto
-                introdutório texto
+                O Brasil é o 3º país mais acometido por distúrbios mentais no mundo, de acordo com dados do relatório
+                global
+                anual “Estado Mental do Mundo 2023”, produzido pela organização Sapiens Labs. Os dados mostram a
+                debilidade na
+                saúde mental da população brasileira , apontando, ainda, um crescimento de X, Y, Z entre crianças e
+                adolescentes.
             </p>
-            <button class="button is-large is-success rozha-one-regular is-responsive is-size-mini ">Leia a reportagem
-                completa</button>
+            <a class="button is-large is-success rozha-one-regular is-responsive is-size-mini " href="{{ url_for('materia1') }}">Leia a reportagem
+                completa </a>
         </div>
         <div class="column is-half column-container">
             <h3>
@@ -56,12 +58,12 @@
         <div class="columns">
             <figure class="image is-16by9 column">
                 <iframe class="has-ratio round-borders" width="640" height="360"
-                src="https://www.youtube.com/embed/B7nnMNIYIAY?si=LxHOzmGjCCJv_hhY"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    src="https://www.youtube.com/embed/B7nnMNIYIAY?si=LxHOzmGjCCJv_hhY" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </figure>
-         
+
             <br><br>
         </div>
         <!-- <div class="container is-fluid">    
