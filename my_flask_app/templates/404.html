@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}404{% endblock %}
+
+{% block content %}
+
+<div class="container is-mobile">
+  <article class="message is-warning is-medium">
+    <div class="message-header ">
+      <p class="mb-0 pb-0 pt-1">404 - PAGINA NÃO ENCONTRADA<p>
+  </div>
+  <div class="message-body custom-beige-background">
+    A página que você tentou acessar não existe, por favor siga para a página inicial e começe
+    novamente sua jornada.
+    <nav class="level " style="margin-top: 20px">
+      <div class="level-item has-text-centered">
+    	<a class="button is-warning is-large is-large" href="{{ url_for('index') }}">Inicío</a>
+	  </div>
+  </nav>
+</div>
+</article>
+</div>
+{% endblock %}
+
+	

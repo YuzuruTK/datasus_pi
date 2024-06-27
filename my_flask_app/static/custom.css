@@ -1,0 +1,108 @@
+
+/* Remover margem inferior de todos os elementos <p> */
+p {
+    margin-bottom: 0 !important;
+}
+
+/* Remover margem superior e inferior de todos os elementos <h1> a <h6> */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Estilos personalizados */
+.custom-gradient-background {
+  background: linear-gradient(
+    to left,
+    #ff7e5f,  /* Cor 1 */
+    #feb47b,  /* Cor 2 */
+    #ff7e5f   /* Cor 3 */
+  );
+  min-height: 100vh;  /* Garante que o fundo cubra toda a altura da página */
+}
+.navbar {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.navbar .navbar-menu {
+  flex-grow: initial;
+  flex-shrink: initial;
+}
+
+/* .audio-player {
+      max-width: 4000px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: #f5f5f5;
+    }
+    .audio-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .progress {
+      
+      flex-grow: 1;
+      height: 10px;
+      background-color: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .progress-bar {
+      
+      height: 100%;
+      background-color: #3273dc;
+      width: 0%;
+      position: relative;
+    }*/
+
+.time-display {
+  display: flex;
+  height: 100%;
+  padding: 0 10px;      
+  font-size: 12px;
+  color: #000;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.audio-player-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  height: 24px;
+}
+
+#play-pause {
+  filter: saturate(0);
+  padding:  0 10px;
+}
+
+#play-pause:hover {
+  text-decoration: none;
+}
+
+.audio-player-wrapper > .progress-bar-container {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  align-items: center;
+}
+
+.progress-bar-container > .progress {
+  margin: 0;
+  cursor: pointer;
+}
+p.remove-margin-bottom {
+    margin-bottom: 0;
+}
