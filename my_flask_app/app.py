@@ -6,30 +6,38 @@ app = Flask(__name__)
 
 # Lista de posts
 posts = [
-    {
-        'folder': 'post-1',
-        'images': [	'5.png',  '6.png', '7.png',  '8.png',  '9.png', '10.png'],
-        'author': 'John Smith',
-        'handle': '@johnsmith',
-        'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
-        'date': '2016-1-1'
-    },
-    {
-        'folder': 'post-2',
-        'images': ['image1.jpg', 'image2.jpg', 'image3.jpg'],
-        'author': 'Jane Doe',
-        'handle': '@janedoe',
-        'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
-        'date': '2016-2-1'
+       {      
+        'folder': 'post-6',
+        'images': [	'10.png',  '11.png'],
+        'author': 'Neuro Data',
+        'handle': '@neuro_data',
+        'content': '',
+        'date': '25 de Junho de 2024'
     },
     {
         'folder': 'post-3',
-        'images': ['image1.jpg', 'image2.jpg', 'image3.jpg'],
-        'author': 'Bob Johnson',
-        'handle': '@bobjohnson',
-        'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
-        'date': '2016-3-1'
-    }
+        'images': [	'1.png',  '2.png', '3.png',  '4.png'],
+        'author': 'Neuro Data',
+        'handle': '@neuro_data',
+        'content': '',
+        'date': '25 de Junho de 2024'
+    },
+    {      
+        'folder': 'post-5',
+        'images': [	'1.png',  '5.png', '6.png',  '9.png'],
+        'author': 'Neuro Data',
+        'handle': '@neuro_data',
+        'content': '',
+        'date': '25 de Junho de 2024'
+    },
+    {
+      'folder': 'post-4',
+        'images': [	'3.png',  '4.png', '7.png',  '8.png'],
+        'author': 'Neuro Data',
+        'handle': '@neuro_data',
+        'content': '',
+        'date': '25 de Junho de 2024'
+    },
 ]
 
 def get_body_class(route):
