@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block title %}Ansiedade e transtornos devido ao abuso de álcool, drogas e substâncias
-psicoativas são as doenças mentais que mais afetam a população ijuiense | Neuro Data - Análise do Cenário Psicossocial da População Ijuiense{%
+psicoativas são as doenças mentais que mais afetam a população ijuiense | Neuro Data - Análise do Cenário Psicossocial
+da População Ijuiense{%
 endblock %}
 
 {% block content %}
@@ -19,10 +20,9 @@ endblock %}
 
     <p class="rozha-one-regular is-size-1">Ansiedade e transtornos devido ao abuso de álcool, drogas e substâncias
         psicoativas são as doenças mentais que mais afetam a população ijuiense </p>
-    <p class="rozha-one-regular">Dados do Datasus revelam que, entre 2014 e 2023, mais de 899 mil atendimentos foram
-        realizados nos Centros de Atenção Psicossocial (CAPS) do município. Deste número, cerca de 66% são relacionados
-        à assistência para adultos e 44% para crianças e adolescentes.
-    </p>
+    <p class="rozha-one-regular">Dados do Datasus revelam que, entre 2014 e 2023, mais de 449 mil atendimentos foram
+        realizados nos Centros de Atenção Psicossocial (Caps) do município. Deste número, cerca de 67.49% são
+        relacionados à assistência para adultos e 32.51% para crianças e adolescentes.
 
 
     <div class="columns">
@@ -46,19 +46,19 @@ endblock %}
                 <figure class="image is-128x128">
                     <img class="is-rounded" src="{{ url_for('static', filename='photos/integrantes/Fernanda.png')}}" />
                 </figure>
-                
+
             </div>
         </div>
         <div class="column ">
             <a class=" is-size-4 rozha-one-regular">Fernanda Mulinari Fank</a>
-                <div class="container"><a class=" rozha-one-regular">Estudante de Jornalismo</a></div>
-                <button class="button is-success rozha-one-regular">
-                    fernanda.fank@sou.unijui.edu.br
-                </button>
+            <div class="container"><a class=" rozha-one-regular">Estudante de Jornalismo</a></div>
+            <button class="button is-success rozha-one-regular">
+                fernanda.fank@sou.unijui.edu.br
+            </button>
         </div>
 
-        
-    
+
+
     </div>
 
     <!-- <div class="audio-player box" id="audio-player-1">
@@ -82,59 +82,56 @@ endblock %}
     </div> -->
 
 
-    <p>Os CAPS são instituições que integram o Sistema Único de Saúde (SUS) e que prestam serviços gratuitos à
+    <p>Os Caps são instituições que integram o Sistema Único de Saúde (SUS) e que prestam serviços gratuitos à
         população. Por meio de uma equipe multidisciplinar, trabalham para atender às necessidades relacionadas à saúde
-        mental das pessoas. </p>
-    <p>Em Ijuí, há três3 destes estabelecimentos: CAPS AD, especializado em atender pessoas que sofrem transtornos
-        decorrentes do abuso de álcool e de outras drogas; CAPS II, que se dedica a ajudar aqueles que sofrem de
-        problemas mentais graves e persistentes.; E e o CAPSi que atende crianças e adolescentes que apresentam
-        transtornos mentais graves e persistentes.
+        mental das pessoas.
+
     </p>
-    <p>Segundo registros retirados das bases de dados do Departamento de Informática do Sistema Único de Saúde
-        (DatasusATASUS), a população de Ijuí, na última décadanos anos de 2014 a 2023, tem procurado atendimento nos
-        centros especializados devido foi afetada por três doenças que ganham destaque com relação ao número de
-        atendimentos, quando comparadas com as outras. </p>
-    <p>Transtornos devidos ao abuso de álcool, drogas e substâncias psicoativas, além de ansiedade, x, y, z, foram as
-        doenças que mais afetaram a população ijuiense nos últimos 10 anos.
+    <p>Em Ijuí, há três destes estabelecimentos: Caps AD II, especializado em atender pessoas que sofrem transtornos
+        decorrentes do abuso de álcool e de outras drogas; Caps II Colmeia, que se dedica a ajudar aqueles que sofrem de
+        problemas mentais graves e persistentes; e o Capsi que atende crianças e adolescentes.
+
     </p>
-    <p>Neste sentido, a atuação dos CAPS ganha destaque, pois são eles que prestam assistência, de forma gratuita, às
-        pessoas que apresentam esses transtornos.
+    <p>Segundo dados do Departamento de Informática do Sistema Único de Saúde (Datasus), nos últimos dez anos, a
+        população de Ijuí tem procurado atendimento em centros especializados devido a problemas como abuso de álcool,
+        drogas e substâncias psicoativas, além de condições como ansiedade, esquizofrenia e depressão. O gráfico abaixo
+        apresenta as dez principais condições que resultam em atendimentos no município, conforme a Classificação
+        Internacional de Doenças (CID), utilizada pela Organização Mundial da Saúde (OMS) para fins estatísticos.
+
     </p>
-    <p>Do total de atendimentos realizados no período, o público mais acolhido é o masculino (XX%), enquanto que XX% dos
-        pacientes são mulheres. </p>
-    <div class="is-danger notification">INSERIR GRÁFICO COM O NÚMERO TOTAL DE ATENDIMENTOS DE CADA CAPS </div>
 
     <div class="columns is-centered">
-        <div class="column is-centered"><img src="{{ url_for('static', filename='graphs/materia-2/.png')}}" alt="graph" /></div>
+        <div class="column is-centered"><img
+                src="{{ url_for('static', filename='graphs/materia-2/Gráfico 1 - 10 doenças que mais afetaram a população .png')}}"
+                alt="Gráfico 1 - 10 doenças que mais afetaram a população" />
+        </div>
     </div>
 
-    <h1>
-        <p>CAPS AD II</p>
-    </h1>
-    <div class="notification is-danger">Foto 1: fachada do serviço</div>
-    <p>
-        Os primeiros dois transtornos são tratados no CAPS AD II, que também é o estabelecimento com maior número de
-        atendimentos, correspondendo a 44,73% dos acolhimentos do município.
+
+    <p>Do total de atendimentos realizados no período, o público mais acolhido é o masculino 67,31% enquanto que 32,68%
+        dos pacientes são mulheres. O gráfico abaixo, representa as porcentagens de atendimentos dos três Caps de Ijuí.
     </p>
-    <p>De todos os Caps, o AD II é o que mais tem demanda por atendimentos (44,73%), seguido do infantil (XX%) e pelo
-        Colméia (22,85%). De acordo com Lidiane Dalla Nora Soares, enfermeira dhá mais de 10 anos na unidade, o CAPS AD
-        II possui aproximadamente 500 pacientes ativos., porém, Ddeste Do totaltotal, 350 frequentam mensalmente o
-        serviço e . Aaqueles que estão mais estáveis participam das atividades a cada dois2 meses.
-    </p>
-    <p>O serviço atende, neste formato, desde 2014, quando, por uma necessidade de demanda de usuários, deixou de
-        prestar acolhimento como CAPS I para se tornar o CAPS AD II. Confira no áudio o depoimento Ada enfermeira
-        Lidiane Dalla Nora Soares explicando a transição:
-    </p>
-    <p>“A gente era o CAPS I, em 2008 ele foi criado e atendia toda a demanda de transtornos mais leves a moderados e
-        também a dependência química. Com o aumento, ao passar do tempo, do uso de substâncias, ele se tornou CAPS AD em
-        2014, atendendo somente a demanda de uso de substância psicoativa”.
-    </p>
-    <div class="notification is-warning">
-        áudio 1: CAPS I para CAPS AD (inserir foto da enfermeira para identificá-la no material)
+
+    <div class="columns is-centered">
+        <div class="column is-centered"><img
+                src="{{ url_for('static', filename='graphs/materia-2/ Gráfico 2 - NÚMERO TOTAL DE ATENDIMENTOS DE CADA CAPS .png')}}"
+                alt="Gráfico 2 - NÚMERO TOTAL DE ATENDIMENTOS DE CADA CAPS " />
+        </div>
     </div>
 
-    <div class="audio-player box" id="audio-player-2">
-        <div class="audio-title rozha-one-regular ">CAPS I para CAPS AD</div>
+    <p>De acordo com dados do Datasus (2014-2023), de todos os Caps, o AD II é o que mais tem demanda por atendimentos
+        (44.45%), seguido do infantil (32.51%) e pelo Caps II Colméia (23.04%). De acordo com Lidiane Dalla Nora Soares,
+        enfermeira da unidade, o Caps AD II possui aproximadamente 500 pacientes ativos. Do total, 350 frequentam
+        mensalmente o serviço e aqueles que estão mais estáveis participam das atividades a cada dois meses.
+    </p>
+    <p>O serviço atende neste formato desde 2014, quando, por uma necessidade de demanda de usuários, deixou de prestar
+        acolhimento como CAPS I para se tornar o Caps AD II. Confira no áudio o depoimento da enfermeira Lidiane
+        explicando a transição:
+    </p>
+
+
+    <div class="audio-player box" id="audio-player-1">
+        <div class="audio-title rozha-one-regular ">áudio 1: CAPS I para CAPS AD</div>
         <div class="audio-player-wrapper">
             <button class="play-pause is-ghost mr-3">▶</button>
             <div class="progress-bar-container">
@@ -146,54 +143,135 @@ endblock %}
             </div>
         </div>
         <audio>
-            <source src="{{ url_for('static', filename='audio/materia-2/áudio-1-CAPS-I-para-CAPS-AD.MP3')}}"
+            <source src="{{ url_for('static', filename='audio/materia-2/áudio 1 CAPS I para CAPS AD.MP3')}}"
                 type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
     </div>
 
 
-    <p>O CAPS II Colmeia - criado para o tratamento de pacientes com transtornos mentais graves e crônicos - possui 900
+    <p>
+        No Caps AD II, é possível observar as doenças relacionadas ao abuso de álcool, drogas e outras substâncias
+        psicoativas além do quadro de Intoxicação aguda por álcool, que pode ser visto no gráfico abaixo:
+
+    </p>
+
+
+    <div class="columns is-centered">
+        <div class="column is-centered"><img
+                src="{{ url_for('static', filename='graphs/materia-2/gráfico x_ 3 doenças mais no Caps AD.png')}}"
+                alt=" gráfico x: 3 doenças mais no Caps AD" />
+        </div>
+    </div>
+
+    <p>Dentro dos atendimentos do Caps AD II, também se observa um número elavado de pacientes do sexo masculino, sendo
+        correspondente a 88,11% do total, conforme ilustra o gráfico:
+
+    </p>
+
+    <div class="columns is-centered">
+        <div class="column is-centered"><img
+                src="{{ url_for('static', filename='graphs/materia-2/gráfico 3 _ porcentagem MXF Caps AD.png')}}"
+                alt="gráfico 3 : porcentagem MXF Caps AD" />
+        </div>
+    </div>
+
+    <p>Quanto à faixa etária com mais casos das três principais doenças, há maior número de atendimentos na faixa dos 50
+        anos de idade. Observe no gráfico abaixo, que divide os atendimentos nas três principais doenças do serviço em
+        faixas de idade de 10 em 10 anos:
+
+    </p>
+
+
+    <div class="columns is-centered">
+        <div class="column is-centered"><img
+                src="{{ url_for('static', filename='graphs/materia-2/gráfico 4_ Faixa etaria Doenças Caps AD.png')}}"
+                alt="gráfico 4: Faixa etária Doenças Caps AD" />
+        </div>
+    </div>
+
+
+    <p>O Caps II Colmeia - criado para o tratamento de pacientes com transtornos mentais graves e crônicos - possui 900
         pacientes ativos em acompanhamento, sendo que, em média, são feitos 60 novos encaminhamentos pela atenção
         primária a cada mês, conforme explica a coordenadora do centro, Angela Maria Signor. De acordo com ela, depois
         da avaliação inicial, em torno de 30% são atendidos pelo serviço.
+
+    </p>
+    <p>As CIDs mais frequentes nos atendimentos são: esquizofrenia paranóide, transtorno depressivo recorrente e
+        episódio depressivo não especificado, ilustrado no gráfico:</p>
+
+    <div class="columns is-centered">
+        <div class="column is-centered"><img
+                src="{{ url_for('static', filename='graphs/materia-2/gráfico 5_ dos casos com mais atendimentos no CAPS II.png')}}"
+                alt="gráfico 5: dos casos com mais atendimentos no CAPS II" />
+        </div>
+    </div>
+
+
+
+    <p>A esquizofrenia paranoide é mais prevalente entre pacientes do sexo masculino, que compõem 70% dos casos
+        tratados. Em contrapartida, ao considerar a depressão, observa-se que as mulheres são mais frequentemente
+        atendidas, representando 75% do total, com 37.864 ocorrências, enquanto os homens respondem por 25%, totalizando
+        12.666 atendimentos.
     </p>
 
     <p>
-        O Sistema do DATASUS categoriza os atendimentos com um número de identificação, relacionadas a Classificação
-        Internacional de Doenças (CID). Durante esses 10 anos, o CAPS AD II, teve como maior número de atendimentos as
-        CIDs: F10- Transtornos mentais comportamentais devidos ao uso de álcool e a CID F19- Transtornos mentais
-        comportamentais devidos ao uso de múltiplas drogas e outras substâncias psicoativas.
-    </p>
-    <div class="notification is-danger">
-        gráfico 2: Doenças com mais atendimentos no CAPS AD
-    </div>
-    <div class="columns is-centered">
-        <div class="column is-centered"><img src="{{ url_for('static', filename='graphs/materia-2/.png')}}" alt="graph" /></div>
-    </div>
-    <h3>
-        <p>Como o paciente chega aos centros especializados?</p>
-    </h3>
 
-    <p>O paciente pode chegar aosaté o CAPS de diferentes formas, sendo encaminhado por qualquer serviço da rede de
-        saúde ou por qualquer serviço do município, como também pode procurar atendimento de forma voluntária e
-        espontânea, se dirigindo ao estabelecimento, no turno da manhã ou da tarde, conforme o horário de funcionamento.
+        Para a coordenadora do CAPS II Colmeia, Angela Maria Signor, essa disparidade nos casos entre homens e mulheres
+        tem relação com a forma que, socialmente, os dois gêneros buscam o serviço.
+
     </p>
-    <p>“A gente tem aqui no CAPS o atendimento por demanda, então sempre tem uma escala com algum profissional
-        disponível. Essa pessoa pode decidir que hoje quer buscar ajuda, ela pode vir aqui e ela vai ser atendida por
-        demanda espontânea”, ressaltou a psicóloga e coordenadora do CAPS AD II, Andressa Dias.
+
+    <p>“Os homens acabam chegando menos aqui, porque, normalmente, eles procuram quando o adoecimento está instalado, já
+        é uma situação mais grave, como também das questões clínicas, costumam consultar com o médico quando não
+        conseguem mais dar conta em casa, é um perfil da sociedade”, comentou a coordenadora.
     </p>
-    <p>Durante o acolhimento inicial, o paciente é escutado por um profissional da equipe multidisciplinar do serviço,
-        que conta com médicos psiquiatras e clínicos, psicólogos, enfermeiros, técnicos de enfermagem e terapeutas
-        ocupacionais. Esses profissionais irão identificar as demandas do paciente e, também, avaliarão se o CAPS AD é o
-        local mais adequado para atendê-las.
+    <p>Em relação aos casos de Esquizofrenia Paranoide, a coordenadora compartilha como a patologia interfere na vida do
+        paciente, comprometendo suas atividades diárias, já que a doença traz alucinações auditivas e visuais. No vídeo
+        abaixo Angela conta o histórico de um paciente com a patologia da esquizofrenia e relata os esforços para
+        melhorar a sua qualidade de vida:
     </p>
-    <p>A coordenadora do CAPS AD explica que é elaborado um Plano Terapêutico Singular (PTS) para as pessoas que buscam
-        o atendimento. Segundo ela, nele serão definidos os dias que o paciente irá frequentar o serviço, se ele irá
-        participar dos grupos e, como serão os atendimentos individuais:. A coordenadora diz que, “a gente vai avaliando
-        as demandas de cada um, por isso que é singular, cada um vai ter o seu”.
+    <div class="box">
+        <h2>Vídeo 1: relato sobre paciente com esquizofrenia</h2>
+        <div class="columns">
+            <figure class="image is-16by9 column">
+                <iframe class="has-ratio round-borders" width="640" height="360"
+                    src="https://www.youtube.com/embed/zUNveQSj4VY?si=BTB8nycm1LryEUpS" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </figure>
+
+        </div>
+    </div>
+
+
+
+    <p>No geral, os pacientes com esquizofrenia “têm dificuldade de se organizar nas tarefas do dia a dia, normalmente
+        eles precisam fazer o uso de mais de uma medicação, e a gente sabe que a médio e longo prazo elas acabam
+        causando algum tipo de efeito colateral”, relatou Angela.
     </p>
-    <div class="notification is-warning">
+
+
+    <p> A coordenadora ainda acrescenta que esses efeitos levam a um declínio cognitivo que se agrava conforme a idade
+        do paciente. Então, acometidos com a doença, necessitam de acompanhamento de equipe durante toda a vida.
+    </p>
+
+    <p>“A cura que a gente busca é manter aquele paciente estável pelo tempo mais longo possível, às vezes eles precisam
+        de hospitalização, a medicação precisa ser ajustada de tempos em tempos, precisa de um suporte de equipe ao
+        longo da vida”, abordou a coordenadora do serviço.
+    </p>
+    <p>Quanto ao perfil de mulheres atendidas, outro padrão é observado: o público tende a buscar o serviço no início
+        dos sinais de adoecimento, principalmente no caso de atendimentos relacionados à depressão, como mencionado
+        anteriormente.
+    </p>
+    <p>“São as relações sociais, a mulher já gosta mais de falar, então conversa com uma amiga que sabe indicar o
+        caminho, consulta no posto, as mulheres procuram mais e elas procuram no início do adoecimento, então quando
+        começa a acontecer alguma coisa elas buscam mais o atendimento", reforçou Angela.
+    </p>
+
+
+    <!-- <div class="notification is-warning">
         áudio 2: PTS oq é
     </div>
     <div class="audio-player box" id="audio-player-3">
@@ -212,49 +290,47 @@ endblock %}
             <source src="{{ url_for('static', filename='audio/materia-2/áudio 2 PTS oq é.MP3')}}" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
-    </div>
+    </div> -->
 
 
     <p>
-        A equipe do CAPS AD II também conta com um musicoterapeuta e uma arteterapeuta, responsáveis pelas oficinas, que
-        atuam juntamente com os demais profissionais nos grupos terapêuticos do serviço, que são: grupo de horta, de
-        música, roda de conversa, grupo de artes, grupo do jornal, grupo de geração de trabalho e renda por meio das
-        artes (Substanciarte), grupo de jogos, bem como um grupo de fotografia que iniciará em breve no serviço, com o
-        auxílio de uma profissional de artes visuais.
+        Quanto à depressão, um dado que chama atenção em Ijuí é o fato de a população na faixa etária de 50 a 60 anos
+        ser mais afetada pela doença. Observe os atendimentos de depressão divididos em faixas etárias de 10 a 10 anos
+        de idade, no gráfico abaixo:
 
     </p>
 
-    <div class="notification is-link">galeria de fotos 1: dos espaços onde são realizadas as atividades do grupo.</div>
 
-    {% from 'galerias/galeria-1.html' import render_gallery %}
-    {{ render_gallery(images_g1, 'photos/galeria-1/', 'galerian1') }}
+    <p>Ainda em relação à depressão, a média dos últimos 10 anos reafirma a prevalência de atendimentos femininos que,
+        como já dito, correspondem a 75% do total. No gráfico abaixo são descritos os atendimentos de 2014 a 2023, na
+        faixa de idade de 50 a 60 anos, dividos por sexo.
 
-    <p class="is-italic">Legenda para a galeria de fotos:(fonte tamanho 10?)</p>
-    <p>Alguns pacientes frequentam o serviço todos os dias e se envolvem em diversos grupos e, inclusive, almoçam no
-        local. Outros trabalham e comparecem apenas aos atendimentos individuais, sendo flexibilizados de acordo com o
-        PTS estruturado para cada um.
-    </p>
-    <p>“Eu fico pensando que se não existisse esse serviço quem que ia escutar esses pacientes, porque infelizmente tem
-        uma discriminação, um rótulo muito grande com os pacientes que fazem o uso, ninguém entende como uma
-        doença.Deles terem um espaço onde eles são acolhidos, são tratados como sujeitos, pelo nome, acho que eles se
-        sentem cidadãos”, Lidiane reforça a importância do CAPS II.
-    </p>
 
-    <p>O paciente Paulo, de 42 anos, já conhecia a atuação do CAPS, mas há mais de 2 meses o seu contato com o serviço
-        tem sido mais frequente. Ele participa das atividades todas as manhãs, faz parte dos grupos terapêuticos e
-        recebe atendimento de enfermagem, terapia ocupacional e psicologia.
-    </p>
 
-    <p>"Esse é um serviço que eu já conheco há bastante tempo, que eu sou usuário crônico, são mais de duas décadas de
-        alcoolismo e drogadição, e essa última vez foi uma vez bem drástica, porque eu tava em uma tentativa de suicídio
-        e eu fui resgatado aqui pelas heroínas do CAPS, então, graças a elas, eu estou aqui nesse momento", contou o
-        paciente.</p>
-    <div class="notification is-warning">
-        áudio 3: paulo falado sobre o seu histórico no serviço
-
+    <div class="columns is-centered">
+        <div class="column is-centered"><img
+                src="{{ url_for('static', filename='graphs/materia-2/gráfico 7_ percentual feminino depressão de 50-60 anos.png')}}"
+                alt="        gráfico 7: percentual feminino depressão de 50-60 anos
+            " />
+        </div>
     </div>
-    <div class="audio-player box" id="audio-player-4">
-        <div class="audio-title rozha-one-regular ">paulo falado sobre o seu histórico no serviço</div>
+
+    </p>
+
+    <p>Ao observar os parâmetros do ano de 2023, esse dado de atendimentos na faixa de 50 a 60 anos, em mulheres, assume
+        um percentual de 88,67% do total.
+
+    </p>
+
+    <p>Para Angela, a depressão de mulheres nessa idade é uma resposta a diversas sobrecargas que surgem ao longo da
+        vida: "O que surge muito são situações de violência doméstica que foram acontecendo durante a vida aí vai
+        chegando em uma fase que a mulher não consegue mais dar conta daquilo sozinha e aí procura o atendimento”.
+        Escute a fala completa da coordenadora sobre o desenvolvimento de depressão em mulheres no áudio abaixo:
+
+    </p>
+
+    <div class="audio-player box" id="audio-player-5">
+        <div class="audio-title rozha-one-regular ">áudio 5 : angela sobre depressão em mulheres</div>
         <div class="audio-player-wrapper">
             <button class="play-pause is-ghost mr-3">▶</button>
             <div class="progress-bar-container">
@@ -267,7 +343,167 @@ endblock %}
         </div>
         <audio>
             <source
-                src="{{ url_for('static', filename='audio/materia-2/áudio 3 paulo falado sobre o seu histórico no ser.MP3')}}"
+                src="{{ url_for('static', filename='audio/materia-2/áudio 5  angela sobre depressão em mulheres.MP3')}}"
+                type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <h2>
+        <p>Como o paciente chega aos centros especializados?
+        </p>
+    </h2>
+
+    <p>O paciente pode chegar aos Caps de diferentes formas, sendo encaminhado por qualquer serviço da rede de saúde,
+        como também pode procurar atendimento de forma voluntária e espontânea, se dirigindo ao estabelecimento, no
+        turno da manhã ou da tarde, conforme o horário de funcionamento.
+
+    </p>
+
+    <p>“A gente tem aqui no Caps o atendimento por demanda, então sempre tem uma escala com algum profissional
+        disponível. Essa pessoa pode decidir que hoje quer buscar ajuda, ela pode vir aqui e ela vai ser atendida por
+        demanda espontânea”, ressaltou a psicóloga e coordenadora do Caps AD II, Andressa Dias.
+
+    </p>
+    <p>Durante o acolhimento inicial, o paciente é escutado por um profissional da equipe multidisciplinar do serviço,
+        que conta com médicos psiquiatras e clínicos, psicólogos, enfermeiros, técnicos de enfermagem e terapeutas
+        ocupacionais. Esses profissionais irão identificar as demandas do paciente e, também, avaliarão se o serviço
+        (Caps AD ou Caps II Colmeia) é o local mais adequado para atendê-las.
+    </p>
+
+    <h2>
+        <p>Com o Plano Terapêutico Singular (PTS), cada paciente é acolhido de acordo com as suas demandas.</p>
+    </h2>
+    <p>A coordenadora do Caps AD explica que é elaborado um Plano Terapêutico Singular (PTS) para as pessoas que buscam
+        o atendimento. Segundo ela, nele serão definidos os dias que o paciente irá frequentar o serviço, se ele irá
+        participar dos grupos e como serão os atendimentos individuais: “a gente vai avaliando as demandas de cada um,
+        por isso que é singular, cada um vai ter o seu”. Confira no áudio abaixo a explicação sobre o que é um PTS,
+        narrada por Andressa Dias.
+    </p>
+
+
+    <div class="audio-player box" id="audio-player-2">
+        <div class="audio-title rozha-one-regular ">áudio 2: PTS oq é</div>
+        <div class="audio-player-wrapper">
+            <button class="play-pause is-ghost mr-3">▶</button>
+            <div class="progress-bar-container">
+                <progress class="progress is-small" value="0" max="100"></progress>
+                <div class="time-display">
+                    <span class="cur-time-audio-player rozha-one-regular">0:00</span> /
+                    <span class="max-time-audio-player rozha-one-regular">0:00</span>
+                </div>
+            </div>
+        </div>
+        <audio>
+            <source src="{{ url_for('static', filename='audio/materia-2/áudio 2 PTS oq é.MP3')}}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <p>Ambos os serviços do Caps atuam sob uma ótica interdisciplinar, contando com psicólogos, enfermeiras, terapeuta
+        ocupacional, psiquiatra e farmacêuticos que trabalham em um mesmo caso.
+
+    </p>
+
+    <p>As atividades com grupos terapêuticos integram o PTS, no Caps II Colmeia estão ativos os de pintura em tela, que
+        acontece nas terças e nas quintas à tarde, bem como oficinas de quebra-cabeça, de colorir, grupos de jogos,
+        grupos de teatro, entre outros que surgem e se adaptam conforme as necessidades dos pacientes.
+    </p>
+
+    <p>A estrutura atual do Caps II Colmeia, que foi inaugurada em 2017, oportuniza o desenvolvimento dos diversos
+        grupos mencionados. Anteriormente, o serviço funcionava em um espaço menor, onde hoje o município aloca as
+        vigilâncias epidemiológicas de saúde. Nesta antiga estrutura, os atendimentos de grupos eram realizados na mesma
+        sala em que ocorriam as reuniões da equipe e em que eram feitas as refeições.
+    </p>
+
+    <!-- 
+    <div class="box"> áudio 6:  angela sobre o espaço</div>
+
+    <div class="audio-player box" id="audio-player-2">
+        <div class="audio-title rozha-one-regular ">áudio 6:  angela sobre o espaço</div>
+        <div class="audio-player-wrapper">
+            <button class="play-pause is-ghost mr-3">▶</button>
+            <div class="progress-bar-container">
+                <progress class="progress is-small" value="0" max="100"></progress>
+                <div class="time-display">
+                    <span class="cur-time-audio-player rozha-one-regular">0:00</span> /
+                    <span class="max-time-audio-player rozha-one-regular">0:00</span>
+                </div>
+            </div>
+        </div>
+        <audio>
+            <source
+                src="{{ url_for('static', filename='audio/materia-2/áudio 2 PTS oq é.MP3')}}"
+                type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div> -->
+
+    <p>
+        Angela comenta a grande importância deste espaço e do serviço para evitar as internações de pacientes. “Se
+        consegue evitar que muitos sejam retirados da família, do mercado de trabalho. A gente busca atender o paciente
+        fazendo com que ele se reabilite, para que continue as atividades que já vinha fazendo, as relações sociais e
+        familiares”.
+
+    </p>
+    <p>No CAPS, o convívio social com outras pessoas que possuem a mesma patologia ajuda tornar o tratamento mais leve
+        para os pacientes. “Para ele entender que não é só ele que está passando por isso, que isso não é loucura, que
+        não estou louco agora que estou indo no CAPS”, finalizou a coordenadora.
+
+    </p>
+
+
+    {% from 'galerias/galeria-1.html' import render_gallery %}
+    {{ render_gallery(images_g2, 'photos/galeria-2/', 'galerian2') }}
+
+    <h2>
+        <p>Musicoterapia e arteterapeuta são diferencial no Caps AD II
+        </p>
+    </h2>
+
+    <p>A equipe do Cap AD II também conta com um musicoterapeuta e uma arteterapeuta, responsáveis pelas oficinas, que
+        atuam juntamente com os demais profissionais nos grupos terapêuticos do serviço, que são: grupo de horta, de
+        música, roda de conversa, grupo de artes, grupo do jornal, grupo de geração de trabalho e renda por meio das
+        artes (Substanciarte), grupo de jogos, bem como um grupo de fotografia que iniciará em breve no serviço, com o
+        auxílio de uma profissional de artes visuais.
+
+    </p>
+    <p>Alguns pacientes frequentam o serviço todos os dias e se envolvem em diversos grupos e, inclusive, almoçam no
+        local. Outros trabalham e comparecem apenas aos atendimentos individuais, sendo flexibilizados de acordo com o
+        PTS estruturado para cada um.
+    </p>
+
+    <p>“Eu fico pensando que se não existisse esse serviço quem que ia escutar esses pacientes, porque infelizmente tem
+        uma discriminação, um rótulo muito grande com os pacientes que fazem o uso, ninguém entende como uma
+        doença.Deles terem um espaço onde eles são acolhidos, são tratados como sujeitos, pelo nome, acho que eles se
+        sentem cidadãos”, Lidiane reforça a importância do Caps AD II.
+    </p>
+
+    <p>O paciente Paulo, de 42 anos, já conhecia a atuação do Caps, mas há mais de 2 meses o seu contato com o serviço
+        tem sido mais frequente. Ele participa das atividades todas as manhãs, faz parte dos grupos terapêuticos e
+        recebe atendimento de enfermagem, terapia ocupacional e psicologia.</p>
+    <p>"Esse é um serviço que eu já conheco há bastante tempo, que eu sou usuário crônico, são mais de duas décadas de
+        alcoolismo e drogadição, e essa última vez foi uma vez bem drástica, porque eu tava em uma tentativa de suicídio
+        e eu fui resgatado aqui pelas heroínas do Caps, então, graças a elas, eu estou aqui nesse momento", contou o
+        paciente. No áudio abaixo o paciente conta seu histórico no serviço.
+    </p>
+
+
+
+    <div class="audio-player box" id="audio-player-3">
+        <div class="audio-title rozha-one-regular ">áudio 3: paulo falado sobre o seu histórico no serviço</div>
+        <div class="audio-player-wrapper">
+            <button class="play-pause is-ghost mr-3">▶</button>
+            <div class="progress-bar-container">
+                <progress class="progress is-small" value="0" max="100"></progress>
+                <div class="time-display">
+                    <span class="cur-time-audio-player rozha-one-regular">0:00</span> /
+                    <span class="max-time-audio-player rozha-one-regular">0:00</span>
+                </div>
+            </div>
+        </div>
+        <audio>
+            <source
+                src="{{ url_for('static', filename='audio/materia-2/áudio 5  angela sobre depressão em mulheres.MP3')}}"
                 type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
@@ -276,17 +512,18 @@ endblock %}
     <p>Paulo está em abstinência total de álcool e de tabaco há mais de seis meses e esteve internado para
         desintoxicação há 8 meses atrás. Ele foi encaminhado pelo CAPS III de Augusto Pestana para o hospital São
         Francisco, onde passou um período de 20 dias e, depois disso, continuou o tratamento no CAPS III por 6 meses.
-    </p>
 
+
+    </p>
     <p>“Lá o serviço tem o acolhimento noturno, a gente permanece lá a semana inteira e vem ao final de semana pra casa,
         tem a possibilidade de você ficar um final de semana lá e no outro vir pra casa, então eu vinha há cada 15 dias
-        para casa", contou Paulo.
+        para casa", contou Paulo. A seguir, Paulo narra como foi o processo de desintoxicação:
     </p>
 
-    <div class="notification is-warning"> áudio 4: Paulo contando o processo de desintoxicação
-    </div>
+ 
+
     <div class="audio-player box" id="audio-player-4">
-        <div class="audio-title rozha-one-regular ">Paulo contando o processo de desintoxicação</div>
+        <div class="audio-title rozha-one-regular ">áudio 4: Paulo contando o processo de desintoxicação</div>
         <div class="audio-player-wrapper">
             <button class="play-pause is-ghost mr-3">▶</button>
             <div class="progress-bar-container">
@@ -304,6 +541,7 @@ endblock %}
             Your browser does not support the audio element.
         </audio>
     </div>
+
     <p>Desde então, Paulo relata que mudou sua rota de vida, hábitos e círculos de convivência. "Minha vida mudou
         radicalmente, não só porque eu quis que mudasse, mas porque eu tenho todo o apoio que eu preciso”. Sua relação
         com a família, afastada já há alguns anos, melhorou nesses últimos meses. “A família vê o esforço e começa a
@@ -311,117 +549,59 @@ endblock %}
         eu tenho acesso aos meus filhos novamente, meus pais são bem mais compreensíveis comigo, a nossa relação tem
         mudado bastante né, e tá tudo se encaminhando para grandes melhoras, já são grandes melhoras”, expressou.
     </p>
-    <div class="box">foto 2: Paulo no grupo de música, sem mostrar o rosto.
-    </div>
-    <div class="columns is-centered ">
-        <div class="column is-centered is-half box"><img
-                src="{{ url_for('static', filename='photos/foto 2_ Paulo no grupo de música, sem mostrar o rosto.JPG')}}"
-                alt="graph" /></div>
-    </div>
 
-    <p>
-        Lucas de Jesus, de 31 anos, também percebe diversas mudanças em sua vida. No serviço há mais de 3 anos, ele
-        conta que devido ao abuso de álcool e drogas procurou ajuda, espontaneamente, porque queria parar com o uso.
+
+    <div class="columns is-centered">
+        <div class="column is-centered"><img src="{{ url_for('static', filename='photos/foto 2_ Paulo no grupo de música, sem mostrar o rosto.JPG')}}"
+                alt="foto 2: Paulo no grupo de música, sem mostrar o rosto." /></div>
+    </div>
+    
+
+    <p>Lucas de Jesus, de 31 anos, também percebe diversas mudanças em sua vida. No serviço há mais de 3 anos, ele conta
+        que devido ao abuso de álcool e drogas procurou ajuda, espontaneamente, porque queria parar com o uso.
+
 
     </p>
+
     <p>Nas segundas, nas quartas de tarde e nas sextas durante a manhã o paciente participa dos grupos Substanciarte, de
         música, sendo o vocalista da banda, e do jornal “À Margem”. No CAPS, Lucas é acompanhado por uma médica e uma
         psicóloga e, antigamente, tinha o acompanhamento da enfermeira Lidiane devido ao uso de tabaco, mas há quase 2
         anos parou de fumar cigarro.
     </p>
+
     <p>"Aqui nesse espaço eu sinto uma família, aqui é uma família praticamente, eu considero né", compartilhou Lucas.
     </p>
-    <p>O paciente conta que também percebe uma grande melhora em sua vida desde que começou a frequentar o CAPS AD,
+    <p>O paciente conta que também percebe uma grande melhora em sua vida desde que começou a frequentar o Caps AD II,
         principalmente quando relembra suas fotos antes de ingressar no serviço. "Nossa melhorou bastante, porque não
         sinto mais vontade de usar droga, vontade de beber. Cheguei aqui com 55 quilos, agora tô com quase 90 quilos, me
         mudou mesmo, eu olho minhas fotos antigamente, e olho agora e parece que eu não sou mais aquele ‘piá’ que era
-        antes".
-    </p>
+        antes". </p>
 
-    <div class="box">foto 3: Lucas no grupo de música
+
+
+    <div class="is-danger notification">foto 3: Lucas no grupo de música
     </div>
-    <div class="columns is-centered ">
-        <div class="column is-centered is-half box"><img
-                src="{{ url_for('static', filename='photos/foto 3_ Lucas no grupo de música.JPG')}}" alt="graph" />
-        </div>
+    <div class="columns is-centered">
+        <div class="column is-centered"><img src="{{ url_for('static', filename='photos/foto 3_ Lucas no grupo de música.JPG')}}"
+                alt="graph" /></div>
     </div>
 
-    <p>A coordenadora do CAPS AD II, Andressa Dias, reforça a importância do serviço ao dizer que por meio das ações
+    <p>A coordenadora do Caps AD II, Andressa Dias, reforça a importância do serviço ao dizer que por meio das ações
         realizadas pelo estabelecimento é possível desmistificar preconceitos, principalmente pelo fato de a comunidade
         enxergar essa atuação na prática. “Que a comunidade em geral consiga perceber e sair um pouco daquela lógica
         preconceituosa, e principalmente aqui voltado para os usuários que a gente sabe que é um público que sofre muito
         preconceito pela sociedade, com essas ações e com o serviço podendo existir e colocando em ação ele consegue
         quebrar um pouco desses paradigmas”.
+
     </p>
 
-    <div class="notification is-link">galeria 2: de fotos do local do serviço
-    </div>
+    {{ render_gallery(images_g1, 'photos/galeria-1/', 'galerian1') }}
 
-    {{ render_gallery(images_g2, 'photos/galeria-2/', 'galerian2') }}
+    O município também possui atendimento especializado para crianças e adolescentes. Esses dados estão discriminados no
+    texto “Saúde mental infantojuvenil: busca por tratamento de crianças e adolescentes cresce em Ijuí”.
 
-
-    <h3>
-        <p>CAPS II Colmeia</p>
-    </h3>
-
-    <div class="box">foto 4: fachada serviço</div>
-
-    <p>O CAPS II Colmeia corresponde a 22,85% dos atendimentos realizados em CAPS no município de Ijuí. De acordo com a
-        coordenadora do serviço, Angela Maria Signor, o serviço foi criado para o tratamento de pacientes com
-        transtornos mentais graves e crônicos.</p>
-
-    <p>A coordenadora informa que, atualmente, são cerca de 900 pacientes ativos em acompanhamento. Em média, são feitos
-        60 novos encaminhamentos, a cada mês, pela atenção primária. Angela explica que, depois da avaliação inicial, em
-        torno de 30% são atendidos pelo serviço.
-    </p>
-
-    <p>As CIDs mais frequentes nos atendimentos são: F20.0 - Esquizofrenia paranoide, F33 - Transtorno depressivo
-        recorrente e F32.9 - Episódio depressivo não especificado.
-    </p>
-
-    <div class="is-danger notification">gráfico 3: dos casos com mais atendimentos no CAPS II
-    </div>
-    <div class="columns is-centered">
-        <div class="column is-centered"><img src="{{ url_for('static', filename='graphs/materia-2/.png')}}" alt="graph" /></div>
-    </div>
-
-    <p>A esquizofrenia paranoide é mais prevalente entre pacientes do sexo masculino, que compõem 70% dos casos
-        tratados. Em contrapartida, ao considerar a depressão, observa-se que as mulheres são mais frequentemente
-        atendidas, representando 75% do total, com 37.864 ocorrências, enquanto os homens respondem por 25%, totalizando
-        12.666 atendimentos.
-    </p>
-
-    <p>Para a coordenadora do CAPS II, Angela Maria Signor, essa disparidade nos casos entre homens e mulheres tem
-        relação com a forma que, socialmente, os dois gêneros buscam o serviço.
-    </p>
-
-    <p>“Os homens acabam chegando menos aqui, porque, normalmente, eles procuram quando o adoecimento está instalado, já
-        é uma situação mais grave, como também das questões clínicas, costumam consultar com o médico quando não
-        conseguem mais dar conta em casa, é um perfil da sociedade”, comentou a coordenadora.</p>
-
-    <p>Em relação aos casos de Esquizofrenia Paranoide, a coordenadora compartilha como a patologia interfere na vida do
-        paciente, comprometendo suas atividades diárias, já que a doença traz alucinações auditivas e visuais.
-    </p>
-
-    <div class="notification is-warning">
-        <p>Tem um paciente que nós acompanhamos ele no serviço de forma intensiva, ele não tem suporte familiar nenhum,
-            já é paciente há muitos anos, nós buscamos na equipe diversas formas de intervenção com ele, porque ele
-            recebe um benefício de prestação continuada e ele sempre teve muita dificuldade de organizar esse valor,
-            chegava no terceiro quarto dia do mês e ele já tinha gastado o benefício dele todo. Ai ficava com
-            dificuldade de pagar as contas de casa no restante do mês, ficava com dificuldade para comprar alimentação
-            pro final de semana, porque durante a semana, ele se alimenta no CAPS. A gente foi sempre tentando modificar
-            a forma que a equipe tinha de fazer as interações com ele até que fomos buscar suporte na Promotoria de
-            justiça o promotor conversando com ele de uma forma que a gente pudesse ajudar sem interditar ele, sem tirar
-            direitos. Então desde o final do ano passado eu e a assistente social temos uma responsabilidade legal com
-            ele que é de ajudar a gerir o benefício, um dispositivo legal que se chama tomada de decisão apoiada. Então
-            ele recebe o salário dele, a gente ajuda ele a organizar as contas de casa, comprar coisas que precisa pra
-            casa, vai em casa ajudar ele na organização, a gente meio que adotou legalmente com o suporte judicial. Isso
-            evita que o paciente seja institucionalizado, que ele vá para um residencial terapêutico, porque ele tem uma
-            casa que é dele, ele só tinha dificuldade mesmo, em função da patologia que é a esquizofrenia, de
-            administrar o benefício.”</p>
-    </div>
     <div class="columns is-centered ">
-        
+
         <div class="comlumn is-centered box">
             <h3>
                 <p>Vídeo 1: relato sobre paciente com esquizofrenia
@@ -435,57 +615,12 @@ endblock %}
     </div>
 
 
-    <p>No geral, os pacientes com esquizofrenia “têm dificuldade de se organizar nas tarefas do dia a dia, normalmente
-        eles precisam fazer o uso de mais de uma medicação, e a gente sabe que a médio e longo prazo elas acabam
-        causando algum tipo de efeito colateral”, relatou Angela.
-    </p>
 
-    <p> A coordenadora ainda acrescenta que esses efeitos levam a um declínio cognitivo que se agrava conforme a idade
-        do paciente. Então, acometidos com a doença, necessitam de acompanhamento de equipe durante toda a vida. Por
-        isso, os dados revelam que os atendimentos relacionados à patologia de Esquizofrenia Paranoide no CAPS II de
-        Ijuí levam a uma permanência no serviço *inserir dado exato*.
-    </p>
-    <p>“A cura que a gente busca é manter aquele paciente estável pelo tempo mais longo possível, às vezes eles precisam
-        de hospitalização, a medicação precisa ser ajustada de tempos em tempos, precisa de um suporte de equipe ao
-        longo da vida”, abordou a coordenadora do serviço.
-    </p>
-    <p>
-        Quanto ao perfil de mulheres atendidas, outro padrão é observado: o público tende a buscar o serviço no início
-        dos sinais de adoecimento, principalmente no caso de atendimentos relacionados à depressão, como mencionado
-        anteriormente.
-    </p>
-    <p>“São as relações sociais, a mulher já gosta mais de falar, então conversa com uma amiga que sabe indicar o
-        caminho, consulta no posto, as mulheres procuram mais e elas procuram no início do adoecimento, então quando
-        começa a acontecer alguma coisa elas buscam mais o atendimento", reforçou Angela.
-    </p>
 
-    <p>
-        Quanto à depressão, um dado que chama atenção em Ijuí é o fato de a população na faixa etária de 50 a 60 anos
-        ser mais afetada pela doença.
-    </p>
-    <div class="notification is-warning">gráfico 4: depressão faixa etárias</div>
-    <p>Ainda em relação à depressão, a média dos últimos 10 anos reafirma a prevalência de atendimentos femininos que,
-        como já dito, correspondem a 75% do total. Ao observar os parâmetros do ano de 2023, esse dado de atendimentos
-        na faixa de 50 a 60 anos, em mulheres, assume um percentual de 88,67% do total. </p>
+    <!-- <div class="notification is-warning"> áudio 5 : angela sobre depressão em mulheres</div> -->
 
-    <div class="notification is-danger">gráfico 5: percentual feminino depressão de 50-60 anos</div>
-
-    <div class="columns is-centered">
-        <div class="column is-centered"><img src="{{ url_for('static', filename='graphs/materia-2/.png')}}" alt="graph" /></div>
-    </div>
-
-    <p>Para Angela, a depressão de mulheres nessa idade é uma resposta a diversas sobrecargas que surgem ao longo da
-        vida</p>
-    <p>“A mulher procura mais, mas muito também pela sobrecarga familiar, pela aposentadoria ou perda de trabalho, a
-        questão da menopausa interfere sim, certamente. A própria questão da imagem corporal, as modificações de casa,
-        às vezes separação. O que surge muito são situações de violência doméstica que foram acontecendo durante a vida
-        aí vai chegando em uma fase que a mulher não consegue mais dar conta daquilo sozinha e aí procura o
-        atendimento”.
-    </p>
-    <div class="notification is-warning"> áudio 5 : angela sobre depressão em mulheres</div>
-
-    <div class="audio-player box" id="audio-player-4">
-        <div class="audio-title rozha-one-regular ">angela sobre depressão em mulheres</div>
+    <div class="audio-player box" id="audio-player-5">
+        <div class="audio-title rozha-one-regular ">áudio 5 : angela sobre depressão em mulheres</div>
         <div class="audio-player-wrapper">
             <button class="play-pause is-ghost mr-3">▶</button>
             <div class="progress-bar-container">
@@ -498,52 +633,23 @@ endblock %}
         </div>
         <audio>
             <source
-                src="{{ url_for('static', filename='audio/materia-2/áudio 5  angela sobre depressão em mulheres.MP33')}}"
+                src="{{ url_for('static', filename='audio/materia-2/áudio 5  angela sobre depressão em mulheres.MP3')}}"
                 type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
     </div>
 
-    <p>O CAPS II atua de portas abertas, por isso os pacientes podem buscar diretamente o serviço, de forma espontânea
-        ou por encaminhamento de outros pontos de atenção da rede de saúde, como por uma Estratégia de Saúde da Família
-        (ESF), por uma Unidade de Pronto Atendimento (UPA), ou por uma outra Secretaria, como a de Habitação e
-        Desenvolvimento.</p>
-    <p>O serviço também atua sob uma ótica interdisciplinar, contando com psicólogos, enfermeiras, terapeuta
-        ocupacional, psiquiatra e farmacêuticos que atuam em um mesmo caso.
-    </p>
 
-    <p>Quanto às atividades com grupos terapêuticos, estão ativos os de pintura em tela, que acontece nas terças e nas
-        quintas à tarde, bem como oficinas de quebra-cabeça, de colorir, grupos de jogos, grupos de teatro, entre outros
-        que surgem e se adaptam conforme as necessidades dos pacientes.
-    </p>
-
-    <p>A estrutura atual do CAPS II, que foi inaugurada em 2017, oportuniza o desenvolvimento dos diversos grupos
-        mencionados. Anteriormente, o serviço funcionava em um espaço menor, onde hoje o município aloca as vigilâncias
-        epidemiológicas de saúde. Nesta antiga estrutura, os atendimentos de grupos eram realizados na mesma sala em que
-        ocorriam as reuniões da equipe e em que eram feitas as refeições.</p>
-
-    <div class="notification is-warning"> áudio 6: angela sobre o espaço</div>
-            <H1>AUDIO 6 NÃO ENCONTRADO</H1>
-    
-
-    <p>Angela comenta a grande importância deste espaço e do serviço para evitar as internações de pacientes. “Se
-        consegue evitar que muitos sejam retirados da família, do mercado de trabalho. A gente busca atender o paciente
-        fazendo com que ele se reabilite, para que continue as atividades que já vinha fazendo, as relações sociais e
-        familiares”.</p>
-
-    <p>No CAPS, o convívio social com outras pessoas que possuem a mesma patologia ajuda tornar o tratamento mais leve
-        para os pacientes. “Para ele entender que não é só ele que está passando por isso, que isso não é loucura, que
-        não estou louco agora que estou indo no CAPS”, finalizou a coordenadora.
-    </p>
-
-
-    <div class="is-warning notification">galeria 3: de fotos do serviço
-    </div>
-
-    <h1>GALERIA 3 NÃO ENCONTRADA</h1>
 
 
 </section>
+
+
+
+
+
+
+
 
 <!-- Modal para visualização de imagem -->
 <div id="image-modal" class="modal">
@@ -559,10 +665,43 @@ endblock %}
     <div class="columns mt-3">
         <button class="column modal-prev button is-primary is-light mr-6 ml-6" aria-label="previous">Anterior</button>
         <button class="column modal-next button is-primary is-light mr-6 ml-6" aria-label="next">Próximo</button>
-    </div>  
+    </div>
 </div>
 
 <script src="{{ url_for('static', filename='js/image-full.js') }}"></script>
 
 
 {%endblock%}
+<!-- <div class="audio-player box" id="audio-player-2">
+    <div class="audio-title rozha-one-regular ">CAPS I para CAPS AD</div>
+    <div class="audio-player-wrapper">
+        <button class="play-pause is-ghost mr-3">▶</button>
+        <div class="progress-bar-container">
+            <progress class="progress is-small" value="0" max="100"></progress>
+            <div class="time-display">
+                <span class="cur-time-audio-player rozha-one-regular">0:00</span> /
+                <span class="max-time-audio-player rozha-one-regular">0:00</span>
+            </div>
+        </div>
+    </div>
+    <audio>
+        <source src="{{ url_for('static', filename='audio/materia-2/áudio-1-CAPS-I-para-CAPS-AD.MP3')}}"
+            type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+</div> -->
+
+
+<!-- 
+<div class="columns is-centered">
+    <div class="column is-centered"><img src="{{ url_for('static', filename='graphs/materia-2/.png')}}" alt="graph" />
+    </div>
+</div>
+
+
+
+<div class="notification is-link">galeria de fotos 1: dos espaços onde são realizadas as atividades do grupo.</div>
+
+
+
+ -->
