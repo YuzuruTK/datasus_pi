@@ -16,7 +16,7 @@ posts = [
     },
     {
         'folder': 'post-3',
-        'images': [	'1.png',  '2.svg', '3.svg',  '4.svg'],
+        'images': [	'1.png',  '2.png', '3.png',  '4.png'],
         'author': 'Neuro Data',
         'handle': '@neuro_data',
         'content': '',
