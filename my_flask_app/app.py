@@ -70,7 +70,23 @@ def materia1():
 @app.route('/materia/doenças-mentais-que-mais-afetam-a-população-ijuiense')
 def materia2():
     body_class = get_body_class(request.path)
-    return render_template('materias/materia-2.html')
+    
+    # Galeria 1
+    image_folder1 = os.path.join(app.static_folder, 'photos/galeria-1')  # type: ignore
+    images_g1 = [f for f in os.listdir(image_folder1) if os.path.isfile(os.path.join(image_folder1, f))]
+    
+    # Galeria 2
+    image_folder2 = os.path.join(app.static_folder, 'photos/galeria-2')  # type: ignore
+    images_g2 = [f for f in os.listdir(image_folder2) if os.path.isfile(os.path.join(image_folder2, f))]
+    
+    return render_template('materias/materia-2.html', body_class=body_class, images_g1=images_g1, images_g2=images_g2 )
+
+
+@app.route('/galeria-1')
+def galeria1():
+    image_folder = os.path.join(app.static_folder, 'photos/galeria-1')  # type: ignore
+    images = [f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, f))]
+    return render_template('galerias/galeria-1.html', imagesg1=images)
 
  
 
@@ -84,6 +100,7 @@ def results():
     image_folder = os.path.join(app.static_folder, 'graphs')  # type: ignore
     images = [f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, f))]
     return render_template('results.html', images=images)
+
 
 @app.route('/blog')
 def blog():

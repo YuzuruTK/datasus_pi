@@ -5,36 +5,40 @@ const formatTime = (seconds) => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const audio = document.getElementById('audio');
-    const playPauseBtn = document.getElementById('play-pause');
-    const progressBar = document.getElementById('progress-bar');
-    const curTimeAudioSpan = document.getElementById("cur-time-audio-player")
-    const maxTimeAudioSpan = document.getElementById("max-time-audio-player")
-    maxTimeAudioSpan.textContent = formatTime(audio.duration);
+    const audioPlayers = document.querySelectorAll('.audio-player.box');
 
-    playPauseBtn.addEventListener('click', () => {
-        if (audio.paused) {
-            audio.play();
-            playPauseBtn.textContent = '◼';
-        } else {
-            audio.pause();
-            playPauseBtn.textContent = '▶';
-        }
-    });
-    
-    
-    audio.addEventListener('timeupdate', () => {
-        const progress = (audio.currentTime / audio.duration) * 100;
-        progressBar.value = progress;
-        curTimeAudioSpan.textContent = formatTime(audio.currentTime);
-       
-    });
+    audioPlayers.forEach((audioPlayer) => {
+        const audio = audioPlayer.querySelector('audio');
+        const playPauseBtn = audioPlayer.querySelector('.play-pause');
+        const progressBar = audioPlayer.querySelector('progress');
+        const curTimeAudioSpan = audioPlayer.querySelector(".cur-time-audio-player");
+        const maxTimeAudioSpan = audioPlayer.querySelector(".max-time-audio-player");
 
+        audio.addEventListener('loadedmetadata', () => {
+            maxTimeAudioSpan.textContent = formatTime(audio.duration);
+        });
 
-    progressBar.addEventListener('click', (e) => {
-        const rect = progressBar.getBoundingClientRect();
-        const offsetX = e.clientX - rect.left;
-        const newTime = (offsetX / rect.width) * audio.duration;
-        audio.currentTime = newTime;
+        playPauseBtn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.textContent = '◼';
+            } else {
+                audio.pause();
+                playPauseBtn.textContent = '▶';
+            }
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressBar.value = progress;
+            curTimeAudioSpan.textContent = formatTime(audio.currentTime);
+        });
+
+        progressBar.addEventListener('click', (e) => {
+            const rect = progressBar.getBoundingClientRect();
+            const offsetX = e.clientX - rect.left;
+            const newTime = (offsetX / rect.width) * audio.duration;
+            audio.currentTime = newTime;
+        });
     });
 });

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Galeria de fotos 1{% endblock %}
+
+
+
+{% macro render_gallery(images, folder, gallery_id) %}
+<div class="">
+    <div class="is-clickable vertical-bar">
+        <div class="title box" onclick="toggleContent('{{ gallery_id }}')">Galeria de fotos <bold class="is-size-1">↓</bold></div>
+        
+        <div class="content" style="display: none;" id="content-{{ gallery_id }}">
+            <section class="section">
+                <div class="container is-mobile box">
+                    {% for i in range(0, images|length, 3) %}
+                        <div class="columns">
+                            {% for image in images[i:i+3] %}
+                            <div class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image has-ratio">
+                                            <img src="{{ url_for('static', filename=folder ~ image) }}" alt="{{ image }}" class="image-thumbnail" data-index="{{ loop.index0 }}">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para visualização de imagem -->
+<div id="image-modal-{{ gallery_id }}" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div class="box">
+            <figure class="image">
+                <img id="modal-image-{{ gallery_id }}" class="image-fullscreen" src="" alt="">
+            </figure>
+        </div>
+    </div>
+    <button class="modal-close button is-warning is-large" aria-label="close"></button>
+    <div class="columns mt-3">
+        <button class="column modal-prev button is-primary is-light mr-6 ml-6" aria-label="previous">Anterior</button>
+        <button class="column modal-next button is-primary is-light mr-6 ml-6" aria-label="next">Próximo</button>
+    </div>  
+</div>
+
+<script src="{{ url_for('static', filename='js/image-full.js') }}"></script>
+<script>
+    function toggleContent(gallery_id) {
+        var content = document.querySelector('#content-' + gallery_id);
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+</script>
+{% endmacro %}
