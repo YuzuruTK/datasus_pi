@@ -1,9 +1,3 @@
-
-# Este repositorio se destina apenas para dar deploy do site usando o serviço Render.com
-## O repositorio oficial esta hospedado no seguinte link
-
-https://github.com/YuzuruTK/datasus_pi
-
 # DEPLOY DO SITE
 ## https://neurodata.onrender.com
 
