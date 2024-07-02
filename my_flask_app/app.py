@@ -51,6 +51,7 @@ def get_body_class(route):
         '/feed': 'custom-beige-background',
         '/materia/Saude-mental-infantojuvenil' : 'custom-beige-background',
         '/materia/doenças-mentais-que-mais-afetam-a-população-ijuiense': 'custom-beige-background',
+        '/materia/Saude-mental-infantojuvenil': 'custom-beige-background',
         # Adicione outras rotas e classes conforme necessário
     }
     return route_classes.get(route, 'default-class')
@@ -73,7 +74,7 @@ def materiaCorpoBase():
 @app.route('/materia/Saude-mental-infantojuvenil')
 def materia1():
     body_class = get_body_class(request.path)
-    return render_template('materias/materia-1.html')
+    return render_template('materias/materia-1.html', body_class=body_class)
 
 @app.route('/materia/doenças-mentais-que-mais-afetam-a-população-ijuiense')
 def materia2():
