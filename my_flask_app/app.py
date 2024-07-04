@@ -1,44 +1,16 @@
 from flask import Flask, render_template, request
 import os
-import subprocess
+import json
 
 app = Flask(__name__)
 
-# Lista de posts
-posts = [
-       {      
-        'folder': 'post-6',
-        'images': [	'10.png',  '11.png'],
-        'author': 'Neuro Data',
-        'handle': '@neuro_data',
-        'content': '',
-        'date': '25 de Junho de 2024'
-    },
-    {
-        'folder': 'post-3',
-        'images': [	'1.png',  '2.png', '3.png',  '4.png'],
-        'author': 'Neuro Data',
-        'handle': '@neuro_data',
-        'content': '',
-        'date': '25 de Junho de 2024'
-    },
-    {      
-        'folder': 'post-5',
-        'images': [	'1.png',  '5.png', '6.png',  '9.png'],
-        'author': 'Neuro Data',
-        'handle': '@neuro_data',
-        'content': '',
-        'date': '25 de Junho de 2024'
-    },
-    {
-      'folder': 'post-4',
-        'images': [	'3.png',  '4.png', '7.png',  '8.png'],
-        'author': 'Neuro Data',
-        'handle': '@neuro_data',
-        'content': '',
-        'date': '25 de Junho de 2024'
-    },
-]
+# Função para carregar os posts do arquivo JSON
+def load_posts():
+    with open('static/posts.json', 'r') as file:
+        return json.load(file)
+
+# Carregar posts
+posts = load_posts()
 
 def get_body_class(route):
     # Dicionário de rotas para classes
@@ -49,7 +21,7 @@ def get_body_class(route):
         '/materias-jornalisticas': 'custom-gradient-background',
         '/materia/base-materia-template': 'custom-beige-background',
         '/feed': 'custom-beige-background',
-        '/materia/Saude-mental-infantojuvenil' : 'custom-beige-background',
+        '/materia/Saude-mental-infantojuvenil': 'custom-beige-background',
         '/materia/doenças-mentais-que-mais-afetam-a-população-ijuiense': 'custom-beige-background',
         '/materia/Saude-mental-infantojuvenil': 'custom-beige-background',
         # Adicione outras rotas e classes conforme necessário
@@ -90,14 +62,11 @@ def materia2():
     
     return render_template('materias/materia-2.html', body_class=body_class, images_g1=images_g1, images_g2=images_g2 )
 
-
 @app.route('/galeria-1')
 def galeria1():
     image_folder = os.path.join(app.static_folder, 'photos/galeria-1')  # type: ignore
     images = [f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, f))]
     return render_template('galerias/galeria-1.html', imagesg1=images)
-
- 
 
 @app.route('/sobre')
 def about():
@@ -109,7 +78,6 @@ def results():
     image_folder = os.path.join(app.static_folder, 'graphs')  # type: ignore
     images = [f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, f))]
     return render_template('results.html', images=images)
-
 
 @app.route('/blog')
 def blog():
