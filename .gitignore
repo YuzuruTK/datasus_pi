@@ -3,3 +3,5 @@
 /data_analysis/tools/susgrep.sh
 /.venv
 /data_analysis/database
+/data_analysis/AutogluonModels
+/AutogluonModels/
